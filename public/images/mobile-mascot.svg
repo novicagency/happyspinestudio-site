@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 290 130">
+  <!-- Car Body - Convertible -->
+  <path d="M40 85 Q40 60 65 60 L210 60 Q235 60 235 75 L235 85 Q235 95 225 95 L50 95 Q40 95 40 85 Z" fill="#0d9488"/>
+  
+  <!-- Car lower body -->
+  <rect x="35" y="80" width="205" height="20" rx="5" fill="#0f766e"/>
+  
+  <!-- Headlight (LEFT side - front of car) -->
+  <ellipse cx="35" cy="87" rx="6" ry="5" fill="#fef3c7"/>
+  
+  <!-- Windshield -->
+  <path d="M75 60 L88 25 L155 25 L155 60 Z" fill="#bfdbfe" opacity="0.7"/>
+  
+  <!-- Seat divider hint -->
+  <line x1="138" y1="60" x2="138" y2="80" stroke="#0a5c54" stroke-width="2"/>
+  
+  <!-- Steering wheel (on top of car body) -->
+  <circle cx="82" cy="58" r="12" fill="none" stroke="#1f2937" stroke-width="4"/>
+  <circle cx="82" cy="58" r="3" fill="#1f2937"/>
+  
+  <!-- Wheels -->
+  <circle cx="75" cy="100" r="18" fill="#1f2937"/>
+  <circle cx="75" cy="100" r="10" fill="#6b7280"/>
+  <circle cx="75" cy="100" r="4" fill="#1f2937"/>
+  <circle cx="200" cy="100" r="18" fill="#1f2937"/>
+  <circle cx="200" cy="100" r="10" fill="#6b7280"/>
+  <circle cx="200" cy="100" r="4" fill="#1f2937"/>
+  
+  <!-- === DRIVER: Doctor (left side) === -->
+  <!-- Doctor - Head (bald) -->
+  <circle cx="110" cy="28" r="20" fill="#fcd9b6"/>
+  
+  <!-- Doctor - Smile -->
+  <path d="M103 33 Q110 41 117 33" stroke="#4a3728" stroke-width="2" fill="none" stroke-linecap="round"/>
+  
+  <!-- Doctor - Eyes -->
+  <circle cx="104" cy="26" r="2.5" fill="#1f2937"/>
+  <circle cx="116" cy="26" r="2.5" fill="#1f2937"/>
+  
+  <!-- Doctor - Eyebrows -->
+  <path d="M101 21 L107 22" stroke="#4a3728" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M113 22 L119 21" stroke="#4a3728" stroke-width="1.5" stroke-linecap="round"/>
+  
+  <!-- Doctor - Body/Coat -->
+  <rect x="95" y="46" width="30" height="22" rx="5" fill="#ffffff"/>
+  
+  <!-- Doctor - Arms on wheel -->
+  <path d="M95 52 Q88 54 82 48" stroke="#fcd9b6" stroke-width="7" fill="none" stroke-linecap="round"/>
+  <path d="M95 56 Q88 60 82 68" stroke="#fcd9b6" stroke-width="7" fill="none" stroke-linecap="round"/>
+  
+  <!-- === PASSENGER: Spine (right side) === -->
+  <g transform="translate(190, 15) scale(0.48)">
+    <!-- Backbone/Spinal cord connecting all vertebrae -->
+    <path d="M0 -20 Q2 -5 0 0 Q3 15 -2 30 Q2 45 -1 60 Q3 75 0 90" stroke="#0f766e" stroke-width="10" fill="none" stroke-linecap="round"/>
+    
+    <!-- Lightning bolt effects - LEFT side -->
+    <g transform="translate(-45, 25)">
+      <path d="M0 0 L8 8 L2 8 L10 20" stroke="#f59e0b" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <path d="M-50 50 L-38 55" stroke="#f59e0b" stroke-width="3" stroke-linecap="round"/>
+    <path d="M-48 65 L-36 62" stroke="#f59e0b" stroke-width="3" stroke-linecap="round"/>
+    
+    <!-- Lightning bolt effects - RIGHT side -->
+    <g transform="translate(35, 25)">
+      <path d="M10 0 L2 8 L8 8 L0 20" stroke="#f59e0b" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <path d="M50 50 L38 55" stroke="#f59e0b" stroke-width="3" stroke-linecap="round"/>
+    <path d="M48 65 L36 62" stroke="#f59e0b" stroke-width="3" stroke-linecap="round"/>
+    
+    <!-- Vertebra 1 (top, tilted right) -->
+    <g transform="translate(0, 0) rotate(8)">
+      <rect x="-22" y="-12" width="44" height="24" rx="6" fill="#f0fdfa" stroke="#0f766e" stroke-width="4"/>
+      <ellipse cx="-26" cy="0" rx="8" ry="5" fill="#f0fdfa" stroke="#0f766e" stroke-width="3"/>
+      <ellipse cx="26" cy="0" rx="8" ry="5" fill="#f0fdfa" stroke="#0f766e" stroke-width="3"/>
+    </g>
+    
+    <!-- Vertebra 2 (tilted left) -->
+    <g transform="translate(0, 30) rotate(-5)">
+      <rect x="-24" y="-12" width="48" height="24" rx="6" fill="#f0fdfa" stroke="#0f766e" stroke-width="4"/>
+      <ellipse cx="-28" cy="0" rx="8" ry="5" fill="#f0fdfa" stroke="#0f766e" stroke-width="3"/>
+      <ellipse cx="28" cy="0" rx="8" ry="5" fill="#f0fdfa" stroke="#0f766e" stroke-width="3"/>
+    </g>
+    
+    <!-- Vertebra 3 (tilted right) -->
+    <g transform="translate(0, 60) rotate(6)">
+      <rect x="-24" y="-12" width="48" height="24" rx="6" fill="#f0fdfa" stroke="#0f766e" stroke-width="4"/>
+      <ellipse cx="-28" cy="0" rx="8" ry="5" fill="#f0fdfa" stroke="#0f766e" stroke-width="3"/>
+      <ellipse cx="28" cy="0" rx="8" ry="5" fill="#f0fdfa" stroke="#0f766e" stroke-width="3"/>
+    </g>
+    
+    <!-- Vertebra 4 (bottom, slight tilt) -->
+    <g transform="translate(0, 90) rotate(-3)">
+      <rect x="-22" y="-12" width="44" height="24" rx="6" fill="#f0fdfa" stroke="#0f766e" stroke-width="4"/>
+      <ellipse cx="-26" cy="0" rx="8" ry="5" fill="#f0fdfa" stroke="#0f766e" stroke-width="3"/>
+      <ellipse cx="26" cy="0" rx="8" ry="5" fill="#f0fdfa" stroke="#0f766e" stroke-width="3"/>
+    </g>
+  </g>
+  
+  <!-- Exhaust smoke clouds (RIGHT side - back of car) -->
+  <circle cx="248" cy="95" r="10" fill="#d1d5db" opacity="0.7"/>
+  <circle cx="260" cy="88" r="14" fill="#e5e7eb" opacity="0.6"/>
+  <circle cx="252" cy="78" r="8" fill="#d1d5db" opacity="0.5"/>
+  <circle cx="275" cy="82" r="11" fill="#f3f4f6" opacity="0.5"/>
+  <circle cx="270" cy="94" r="9" fill="#e5e7eb" opacity="0.4"/>
+  
+  <!-- Motion lines (LEFT side - showing forward movement) -->
+  <path d="M25 70 L12 70" stroke="#14b8a6" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+  <path d="M25 80 L8 80" stroke="#14b8a6" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+  <path d="M25 90 L12 90" stroke="#14b8a6" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+</svg>

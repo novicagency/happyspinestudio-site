@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 280" fill="none">
+  <!-- Palm -->
+  <ellipse cx="100" cy="220" rx="55" ry="45" fill="#e8e4df" stroke="#c9c4bc" stroke-width="3"/>
+  
+  <!-- Wrist bones -->
+  <rect x="85" y="250" width="30" height="30" rx="5" fill="#e8e4df" stroke="#c9c4bc" stroke-width="2"/>
+  
+  <!-- Thumb -->
+  <g>
+    <ellipse cx="45" cy="200" rx="12" ry="18" fill="#e8e4df" stroke="#c9c4bc" stroke-width="2"/>
+    <ellipse cx="35" cy="175" rx="10" ry="15" fill="#e8e4df" stroke="#c9c4bc" stroke-width="2"/>
+  </g>
+  
+  <!-- Index Finger -->
+  <g>
+    <ellipse cx="60" cy="160" rx="10" ry="22" fill="#e8e4df" stroke="#c9c4bc" stroke-width="2"/>
+    <ellipse cx="58" cy="120" rx="9" ry="20" fill="#e8e4df" stroke="#c9c4bc" stroke-width="2"/>
+    <ellipse cx="56" cy="82" rx="8" ry="18" fill="#e8e4df" stroke="#c9c4bc" stroke-width="2"/>
+  </g>
+  
+  <!-- Middle Finger -->
+  <g>
+    <ellipse cx="90" cy="150" rx="10" ry="24" fill="#e8e4df" stroke="#c9c4bc" stroke-width="2"/>
+    <ellipse cx="90" cy="105" rx="9" ry="22" fill="#e8e4df" stroke="#c9c4bc" stroke-width="2"/>
+    <ellipse cx="90" cy="62" rx="8" ry="20" fill="#e8e4df" stroke="#c9c4bc" stroke-width="2"/>
+  </g>
+  
+  <!-- Ring Finger -->
+  <g>
+    <ellipse cx="120" cy="155" rx="10" ry="22" fill="#e8e4df" stroke="#c9c4bc" stroke-width="2"/>
+    <ellipse cx="122" cy="115" rx="9" ry="20" fill="#e8e4df" stroke="#c9c4bc" stroke-width="2"/>
+    <ellipse cx="124" cy="78" rx="8" ry="17" fill="#e8e4df" stroke="#c9c4bc" stroke-width="2"/>
+  </g>
+  
+  <!-- Pinky Finger -->
+  <g>
+    <ellipse cx="148" cy="168" rx="9" ry="18" fill="#e8e4df" stroke="#c9c4bc" stroke-width="2"/>
+    <ellipse cx="152" cy="138" rx="8" ry="16" fill="#e8e4df" stroke="#c9c4bc" stroke-width="2"/>
+    <ellipse cx="155" cy="110" rx="7" ry="14" fill="#e8e4df" stroke="#c9c4bc" stroke-width="2"/>
+  </g>
+  
+  <!-- Knuckle details -->
+  <circle cx="60" cy="180" r="4" fill="#d4d0c8"/>
+  <circle cx="90" cy="175" r="4" fill="#d4d0c8"/>
+  <circle cx="120" cy="178" r="4" fill="#d4d0c8"/>
+  <circle cx="145" cy="185" r="4" fill="#d4d0c8"/>
+</svg>
