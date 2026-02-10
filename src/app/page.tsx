@@ -10,35 +10,35 @@ function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
       {/* Menu */}
       <div className={`absolute left-0 top-0 bottom-0 w-72 bg-white shadow-xl transition-transform duration-300 ease-out ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}>
         <div className="p-6">
-          <button onClick={onClose} className="text-teal-600 mb-6 cursor-pointer">
+          <button onClick={onClose} className="text-[#2c5887] mb-6 cursor-pointer">
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
           <nav className="space-y-4">
-            <a href="#" onClick={onClose} className="block text-base font-medium text-teal-800 hover:text-teal-600 transition">Home</a>
-            <a href="/about" onClick={onClose} className="block text-base font-medium text-teal-800 hover:text-teal-600 transition">About</a>
-            <a href="#pricing" onClick={onClose} className="block text-base font-medium text-teal-800 hover:text-teal-600 transition">Pricing</a>
-            <a href="#testimonials" onClick={onClose} className="block text-base font-medium text-teal-800 hover:text-teal-600 transition">Reviews</a>
-            <a href="#hours" onClick={onClose} className="block text-base font-medium text-teal-800 hover:text-teal-600 transition">Hours</a>
-            <a href="#contact" onClick={onClose} className="block text-base font-medium text-teal-800 hover:text-teal-600 transition">Contact</a>
+            <a href="#" onClick={onClose} className="block text-base font-medium text-[#1a3351] hover:text-[#2c5887] transition">Home</a>
+            <a href="/about" onClick={onClose} className="block text-base font-medium text-[#1a3351] hover:text-[#2c5887] transition">About</a>
+            <a href="#pricing" onClick={onClose} className="block text-base font-medium text-[#1a3351] hover:text-[#2c5887] transition">Pricing</a>
+            <a href="#testimonials" onClick={onClose} className="block text-base font-medium text-[#1a3351] hover:text-[#2c5887] transition">Reviews</a>
+            <a href="#hours" onClick={onClose} className="block text-base font-medium text-[#1a3351] hover:text-[#2c5887] transition">Hours</a>
+            <a href="#contact" onClick={onClose} className="block text-base font-medium text-[#1a3351] hover:text-[#2c5887] transition">Contact</a>
           </nav>
-          <div className="mt-6 -mx-6 -mb-6 p-5 bg-teal-600">
+          <div className="mt-6 -mx-6 -mb-6 p-5 bg-[#2c5887]">
             <div className="space-y-3">
-              <a href="tel:843-855-1300" className="flex items-center gap-3 text-white hover:text-teal-100 transition">
-                <svg className="w-5 h-5 text-teal-200" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+              <a href="tel:843-855-1300" className="flex items-center gap-3 text-white hover:text-blue-100 transition">
+                <svg className="w-5 h-5 text-blue-200" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
                 <span className="font-semibold">(843) 855-1300</span>
               </a>
-              <a href="mailto:contact@happyspine.com" className="flex items-center gap-3 text-white hover:text-teal-100 transition">
-                <svg className="w-5 h-5 text-teal-200" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+              <a href="mailto:contact@happyspine.com" className="flex items-center gap-3 text-white hover:text-blue-100 transition">
+                <svg className="w-5 h-5 text-blue-200" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
                 <span className="text-sm">contact@happyspine.com</span>
               </a>
-              <a href="https://maps.google.com/?q=207+Chartwell+Ct+Myrtle+Beach+SC+29588" target="_blank" rel="noopener noreferrer" className="flex items-start gap-3 text-white hover:text-teal-100 transition">
-                <svg className="w-5 h-5 text-teal-200 mt-0.5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+              <a href="https://maps.google.com/?q=207+Chartwell+Ct+Myrtle+Beach+SC+29588" target="_blank" rel="noopener noreferrer" className="flex items-start gap-3 text-white hover:text-blue-100 transition">
+                <svg className="w-5 h-5 text-blue-200 mt-0.5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                   <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
@@ -229,34 +229,25 @@ export default function Home() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
               </svg>
             </button>
-            {/* Logo Placeholder - Mobile */}
-            <div className="md:hidden w-20 h-10 bg-gray-100 border border-gray-300 rounded flex items-center justify-center text-xs text-gray-400">
-              LOGO
-            </div>
-            {/* Logo + Title - Desktop Only */}
-            <div className="hidden md:flex items-center gap-3">
-              <div className="w-10 h-10 bg-gray-100 border border-gray-300 rounded flex items-center justify-center text-xs text-gray-400">
-                LOGO
-              </div>
-              <div>
-                <div className="text-lg font-semibold text-gray-900">The Happy Spine Studio</div>
-              </div>
-            </div>
+            {/* Logo - Mobile */}
+            <img src="/images/logo-full.png" alt="The Happy Spine Studio" className="md:hidden h-20 w-auto -my-4 ml-2" style={{ transform: 'scaleX(1.3)' }} />
+            {/* Logo - Desktop */}
+            <img src="/images/logo-full.png" alt="The Happy Spine Studio" className="hidden md:block h-32 w-auto -my-6" />
           </div>
           
           {/* Desktop Nav Links */}
-          <div className="hidden md:flex gap-8 text-gray-600 font-medium">
-            <a href="/about" className="hover:text-teal-600 transition">About</a>
-            <a href="#pricing" className="hover:text-teal-600 transition">Pricing</a>
-            <a href="#testimonials" className="hover:text-teal-600 transition">Reviews</a>
-            <a href="#hours" className="hover:text-teal-600 transition">Hours</a>
-            <a href="#contact" className="hover:text-teal-600 transition">Contact</a>
+          <div className="hidden md:flex gap-8 text-gray-600 font-medium text-lg">
+            <a href="/about" className="hover:text-[#2c5887] transition">About</a>
+            <a href="#pricing" className="hover:text-[#2c5887] transition">Pricing</a>
+            <a href="#testimonials" className="hover:text-[#2c5887] transition">Reviews</a>
+            <a href="#hours" className="hover:text-[#2c5887] transition">Hours</a>
+            <a href="#contact" className="hover:text-[#2c5887] transition">Contact</a>
           </div>
           
           {/* CTA Button - Both Mobile & Desktop */}
           <a
             href="#pricing"
-            className="bg-teal-600 text-white px-4 py-2.5 rounded font-semibold hover:bg-teal-700 transition text-sm shadow-sm"
+            className="bg-[#2c5887] text-white px-2 md:px-5 py-2.5 md:py-3 rounded font-semibold hover:bg-[#1e3a5f] transition text-sm md:text-base shadow-sm"
           >
             View Services
           </a>
@@ -264,18 +255,18 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-24 md:pt-28 pb-4 md:pb-10 px-4 bg-white">
+      <section className="pt-24 md:pt-36 pb-4 md:pb-10 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="md:grid md:grid-cols-2 md:gap-12 md:items-start">
             {/* Left Column */}
             <div>
-            <p className="text-teal-600 text-sm md:text-xl font-semibold md:font-bold tracking-[0.2em] uppercase mb-2 md:mb-4 flex items-center gap-3 md:gap-4">The Happy Spine Studio <img src="/images/spine.png" alt="" className="w-6 h-6 md:w-11 md:h-11 object-contain" style={{ filter: 'invert(32%) sepia(85%) saturate(456%) hue-rotate(131deg) brightness(92%) contrast(91%)' }} /></p>
-            <h1 className="text-teal-700 text-4xl md:text-6xl font-bold mb-2 md:mb-4 tracking-tight" style={{ fontFamily: 'var(--font-poppins)' }}>Myrtle Beach</h1>
-            <p className="text-teal-600/70 text-base md:text-2xl mb-3 md:mb-6 italic tracking-wide">"Make Your Spine Happy."</p>
-            <div className="inline-block bg-teal-50 border border-teal-200 rounded-lg md:rounded-xl px-4 md:px-6 py-2 md:py-4">
-              <p className="text-teal-700 font-semibold text-sm md:text-lg">Walk-In <span className="font-normal text-teal-600">• No appointments necessary</span></p>
+            <p className="text-[#2c5887] text-sm md:text-xl font-semibold md:font-bold tracking-[0.2em] uppercase mb-2 md:mb-4 flex items-center gap-3 md:gap-4">The Happy Spine Studio <img src="/images/spine.png" alt="" className="w-6 h-6 md:w-11 md:h-11 object-contain" style={{ filter: 'invert(27%) sepia(45%) saturate(700%) hue-rotate(180deg) brightness(90%) contrast(90%)' }} /></p>
+            <h1 className="text-[#1e3a5f] text-4xl md:text-6xl font-bold mb-2 md:mb-4 tracking-tight" style={{ fontFamily: 'var(--font-poppins)' }}>Myrtle Beach</h1>
+            <p className="text-[#2c5887]/70 text-base md:text-2xl mb-3 md:mb-6 italic tracking-wide">"Make Your Spine Happy."</p>
+            <div className="inline-block bg-blue-50 border border-blue-200 rounded-lg md:rounded-xl px-4 md:px-6 py-2 md:py-4">
+              <p className="text-[#1e3a5f] font-semibold text-sm md:text-lg">Walk-In <span className="font-normal text-[#2c5887]">• No appointments necessary</span></p>
             </div>
-            <div className="my-6 md:my-10 h-1 md:h-1.5 w-32 md:w-48 bg-gradient-to-r from-teal-500 via-teal-400 to-transparent rounded-full"></div>
+            <div className="my-6 md:my-10 h-1 md:h-1.5 w-32 md:w-48 bg-gradient-to-r from-blue-500 via-blue-400 to-transparent rounded-full"></div>
             {/* Address */}
             <a 
               href="https://maps.google.com/?q=207+Chartwell+Ct+Myrtle+Beach+SC+29588" 
@@ -283,24 +274,24 @@ export default function Home() {
               rel="noopener noreferrer"
               className="flex items-start gap-3 md:gap-4 mb-4 md:mb-6 hover:opacity-80 transition cursor-pointer"
             >
-              <svg className="w-5 h-5 md:w-7 md:h-7 text-teal-600 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5 md:w-7 md:h-7 text-[#2c5887] mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
               </svg>
               <div>
-                <p className="text-teal-700 text-base md:text-xl font-medium">207 Chartwell Ct.</p>
-                <p className="text-teal-600 text-base md:text-xl">Myrtle Beach, SC 29588</p>
+                <p className="text-[#1e3a5f] text-base md:text-xl font-medium">207 Chartwell Ct.</p>
+                <p className="text-[#2c5887] text-base md:text-xl">Myrtle Beach, SC 29588</p>
               </div>
             </a>
 
             {/* Hours */}
             <div className="mb-4 md:mb-6">
               <div className="flex items-center gap-3 md:gap-4">
-                <svg className="w-5 h-5 md:w-7 md:h-7 text-teal-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5 md:w-7 md:h-7 text-[#2c5887] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 <div>
-                  <p className="text-teal-700 text-base md:text-xl">
+                  <p className="text-[#1e3a5f] text-base md:text-xl">
                     {storeStatus.isOpen ? (
                       <><span className="text-emerald-500 font-semibold">Open</span> · {storeStatus.message}</>
                     ) : (
@@ -309,7 +300,7 @@ export default function Home() {
                   </p>
                   <button 
                     onClick={() => setHoursOpen(!hoursOpen)}
-                    className="text-teal-500 text-sm md:text-base hover:text-teal-700 transition flex items-center gap-1 cursor-pointer"
+                    className="text-blue-500 text-sm md:text-base hover:text-[#1e3a5f] transition flex items-center gap-1 cursor-pointer"
                   >
                     {hoursOpen ? "− Hide" : "+ View All Hours"}
                   </button>
@@ -317,15 +308,15 @@ export default function Home() {
               </div>
               {/* Hours Dropdown */}
               {hoursOpen && (
-                <div className="mt-2 ml-8 bg-teal-50 border border-teal-200 rounded-lg px-3 py-2 text-xs w-48">
-                  <p className="text-teal-800 font-semibold mb-1">Studio Hours</p>
-                  <div className="space-y-1 text-teal-600">
-                    <div className="flex justify-between"><span>Mon</span><span className="text-teal-800">10am–7pm</span></div>
-                    <div className="flex justify-between"><span>Tue</span><span className="text-teal-500">Mobile</span></div>
-                    <div className="flex justify-between"><span>Wed</span><span className="text-teal-800">10am–7pm</span></div>
-                    <div className="flex justify-between"><span>Thu</span><span className="text-teal-500">Mobile</span></div>
-                    <div className="flex justify-between"><span>Fri</span><span className="text-teal-800">10am–7pm</span></div>
-                    <div className="flex justify-between"><span>Sat</span><span className="text-teal-800">10am–2pm</span></div>
+                <div className="mt-2 ml-8 bg-blue-50 border border-blue-200 rounded-lg px-3 py-2 text-xs w-48">
+                  <p className="text-[#1a3351] font-semibold mb-1">Studio Hours</p>
+                  <div className="space-y-1 text-[#2c5887]">
+                    <div className="flex justify-between"><span>Mon</span><span className="text-[#1a3351]">10am–7pm</span></div>
+                    <div className="flex justify-between"><span>Tue</span><span className="text-blue-500">Mobile</span></div>
+                    <div className="flex justify-between"><span>Wed</span><span className="text-[#1a3351]">10am–7pm</span></div>
+                    <div className="flex justify-between"><span>Thu</span><span className="text-blue-500">Mobile</span></div>
+                    <div className="flex justify-between"><span>Fri</span><span className="text-[#1a3351]">10am–7pm</span></div>
+                    <div className="flex justify-between"><span>Sat</span><span className="text-[#1a3351]">10am–2pm</span></div>
                     <div className="flex justify-between"><span>Sun</span><span className="text-red-500">Closed</span></div>
                   </div>
                 </div>
@@ -334,29 +325,29 @@ export default function Home() {
 
             {/* Phone */}
             <div className="flex items-center gap-3 md:gap-4 mb-6 md:mb-8">
-              <svg className="w-5 h-5 md:w-7 md:h-7 text-teal-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5 md:w-7 md:h-7 text-[#2c5887] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
               </svg>
-              <a href="tel:843-855-1300" className="text-teal-700 text-base md:text-xl font-semibold hover:text-teal-500 transition">
+              <a href="tel:843-855-1300" className="text-[#1e3a5f] text-base md:text-xl font-semibold hover:text-blue-500 transition">
                 (843) 855-1300
               </a>
             </div>
 
             {/* Doctor Info Card - Mobile */}
-            <div className="md:hidden bg-teal-50 rounded-xl px-4 py-3 shadow-lg border-2 border-teal-400">
+            <div className="md:hidden bg-blue-50 rounded-xl px-4 py-3 shadow-lg border-2 border-blue-400">
               <div className="flex items-center gap-3">
                 {/* Headshot */}
-                <img src="/images/headshot.png" alt="Dr. Jason Bell" className="w-14 h-14 object-cover rounded-full flex-shrink-0 shadow-md ring-2 ring-white" />
+                <img src="/images/headshot.png" alt="Dr. Jason Bell" className="w-14 h-14 object-cover rounded-full flex-shrink-0 shadow-md ring-2 ring-white" style={{ objectPosition: 'center 80%' }} />
                 {/* Info */}
                 <div className="flex-1 min-w-0">
-                  <p className="text-teal-800 font-bold text-sm">Jason Bell, DC</p>
-                  <p className="text-teal-600 text-xs leading-snug mt-0.5">Personalized chiropractic care with a focus on helping Myrtle Beach feel their best.</p>
+                  <p className="text-[#1a3351] font-bold text-sm">Jason Bell, DC</p>
+                  <p className="text-[#2c5887] text-xs leading-snug mt-0.5">Personalized chiropractic care with a focus on helping Myrtle Beach feel their best.</p>
                   <div className="flex items-center gap-1.5 mt-1">
                     <span className="text-amber-400 text-xs">★★★★★</span>
-                    <span className="text-teal-800 text-xs font-semibold">4.8</span>
-                    <span className="text-teal-500 text-xs">(50+ reviews)</span>
+                    <span className="text-[#1a3351] text-xs font-semibold">4.8</span>
+                    <span className="text-blue-500 text-xs">(50+ reviews)</span>
                   </div>
-                  <a href="/about" className="text-teal-600 text-xs font-semibold hover:text-teal-800 transition flex items-center gap-1 mt-1.5">
+                  <a href="/about" className="text-[#2c5887] text-xs font-semibold hover:text-[#1a3351] transition flex items-center gap-1 mt-1.5">
                     About Jason <span className="text-sm">→</span>
                   </a>
                 </div>
@@ -367,20 +358,20 @@ export default function Home() {
             {/* Right Column - Desktop Only */}
             <div className="hidden md:block">
               {/* Doctor Info Card - Desktop */}
-              <div className="bg-teal-50 rounded-2xl p-6 shadow-xl border-2 border-teal-400">
+              <div className="bg-blue-50 rounded-2xl p-6 shadow-xl border-2 border-blue-400">
                 <div className="flex items-center gap-4 mb-4">
-                  <img src="/images/headshot.png" alt="Dr. Jason Bell" className="w-16 h-16 object-cover rounded-full flex-shrink-0 shadow-lg ring-4 ring-white" style={{ width: '76px', height: '76px' }} />
+                  <img src="/images/headshot.png" alt="Dr. Jason Bell" className="w-16 h-16 object-cover rounded-full flex-shrink-0 shadow-lg ring-4 ring-white" style={{ width: '76px', height: '76px', objectPosition: 'center 80%' }} />
                   <div>
-                    <p className="text-teal-800 font-bold text-xl">Jason Bell, DC</p>
+                    <p className="text-[#1a3351] font-bold text-xl">Jason Bell, DC</p>
                     <div className="flex items-center gap-2 mt-1">
                       <span className="text-amber-400 text-base">★★★★★</span>
-                      <span className="text-teal-800 text-sm font-semibold">4.8</span>
-                      <span className="text-teal-500 text-sm">(50+ reviews)</span>
+                      <span className="text-[#1a3351] text-sm font-semibold">4.8</span>
+                      <span className="text-blue-500 text-sm">(50+ reviews)</span>
                     </div>
                   </div>
                 </div>
-                <p className="text-teal-700 text-base leading-relaxed mb-4">Personalized chiropractic care with a focus on helping Myrtle Beach feel their best.</p>
-                <a href="/about" className="inline-flex items-center gap-2 text-teal-600 font-semibold hover:text-teal-800 transition cursor-pointer">
+                <p className="text-[#1e3a5f] text-base leading-relaxed mb-4">Personalized chiropractic care with a focus on helping Myrtle Beach feel their best.</p>
+                <a href="/about" className="inline-flex items-center gap-2 text-[#2c5887] font-semibold hover:text-[#1a3351] transition cursor-pointer">
                   About Jason <span className="text-lg">→</span>
                 </a>
               </div>
@@ -388,9 +379,9 @@ export default function Home() {
               {/* Action Image Slideshow - Desktop */}
               <div className="mt-8 mb-6 relative">
                 {/* Outer frame */}
-                <div className="bg-gradient-to-br from-teal-700 via-teal-800 to-teal-900 p-2 rounded-lg">
+                <div className="bg-gradient-to-br from-[#1e3a5f] via-[#1a3351] to-[#152a42] p-2 rounded-lg">
                   {/* Inner matte */}
-                  <div className="bg-gradient-to-br from-teal-50 via-white to-teal-50 p-3 rounded-md">
+                  <div className="bg-gradient-to-br from-blue-50 via-white to-blue-50 p-3 rounded-md">
                     {/* Image container */}
                     <div className="relative aspect-[3/2] overflow-hidden rounded-sm">
                       {actionImages.map((image, index) => (
@@ -429,55 +420,55 @@ export default function Home() {
       </section>
 
       {/* New Patient Special Banner - Ticker */}
-      <section className="bg-pink-600 overflow-hidden">
+      <section className="bg-[#db813c] overflow-hidden md:-mt-3">
         <div className="py-2 flex">
           <div className="animate-marquee whitespace-nowrap flex items-center gap-16 pr-16">
             <span className="flex items-center gap-3 text-white">
               <span className="font-bold">$29 New Patient Special</span>
-              <span className="text-pink-200">•</span>
+              <span className="text-[#f5d4bc]">•</span>
               <span>Includes consult, exam & adjustment</span>
             </span>
             <span className="flex items-center gap-3 text-white">
               <span className="font-bold">$29 New Patient Special</span>
-              <span className="text-pink-200">•</span>
+              <span className="text-[#f5d4bc]">•</span>
               <span>Includes consult, exam & adjustment</span>
             </span>
             <span className="flex items-center gap-3 text-white">
               <span className="font-bold">$29 New Patient Special</span>
-              <span className="text-pink-200">•</span>
+              <span className="text-[#f5d4bc]">•</span>
               <span>Includes consult, exam & adjustment</span>
             </span>
             <span className="flex items-center gap-3 text-white">
               <span className="font-bold">$29 New Patient Special</span>
-              <span className="text-pink-200">•</span>
+              <span className="text-[#f5d4bc]">•</span>
               <span>Includes consult, exam & adjustment</span>
             </span>
           </div>
           <div className="animate-marquee whitespace-nowrap flex items-center gap-16 pr-16">
             <span className="flex items-center gap-3 text-white">
               <span className="font-bold">$29 New Patient Special</span>
-              <span className="text-pink-200">•</span>
+              <span className="text-[#f5d4bc]">•</span>
               <span>Includes consult, exam & adjustment</span>
             </span>
             <span className="flex items-center gap-3 text-white">
               <span className="font-bold">$29 New Patient Special</span>
-              <span className="text-pink-200">•</span>
+              <span className="text-[#f5d4bc]">•</span>
               <span>Includes consult, exam & adjustment</span>
             </span>
             <span className="flex items-center gap-3 text-white">
               <span className="font-bold">$29 New Patient Special</span>
-              <span className="text-pink-200">•</span>
+              <span className="text-[#f5d4bc]">•</span>
               <span>Includes consult, exam & adjustment</span>
             </span>
             <span className="flex items-center gap-3 text-white">
               <span className="font-bold">$29 New Patient Special</span>
-              <span className="text-pink-200">•</span>
+              <span className="text-[#f5d4bc]">•</span>
               <span>Includes consult, exam & adjustment</span>
             </span>
           </div>
         </div>
-        <div className="bg-pink-700 py-3 text-center">
-          <a href="/new-patient" className="inline-flex items-center gap-2 bg-white text-pink-600 px-6 py-2 rounded-full font-semibold text-sm hover:bg-pink-50 transition shadow-md">
+        <div className="bg-[#c46d2a] py-3 text-center">
+          <a href="/new-patient" className="inline-flex items-center gap-2 bg-white text-[#db813c] px-6 py-2 rounded-full font-semibold text-sm hover:bg-[#fdf4ee] transition shadow-md">
             Claim Your $29 Visit
             <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
@@ -489,10 +480,10 @@ export default function Home() {
       {/* Video Carousel */}
       <section className="bg-gray-50 py-12 md:py-10 px-4">
         <div className="max-w-3xl mx-auto">
-          <p className="text-teal-600 text-2xl md:text-3xl font-semibold tracking-[0.2em] uppercase mb-6 text-center">Showcase</p>
+          <p className="text-[#2c5887] text-2xl md:text-3xl font-semibold tracking-[0.2em] uppercase mb-6 text-center">Showcase</p>
           {/* Video Container */}
           <div className="bg-white rounded-xl shadow-lg overflow-hidden mb-4">
-            <div className="aspect-video bg-teal-900 flex items-center justify-center relative">
+            <div className="aspect-video bg-[#152a42] flex items-center justify-center relative">
               <div className="text-center text-white">
                 <div className="w-20 h-20 mx-auto bg-white/20 rounded-full flex items-center justify-center mb-3 hover:bg-white/30 transition cursor-pointer">
                   <svg className="w-10 h-10 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
@@ -503,8 +494,8 @@ export default function Home() {
               </div>
             </div>
             <div className="p-4">
-              <h4 className="font-semibold text-teal-800">{videos[currentVideo].title}</h4>
-              <p className="text-teal-600 text-sm">{videos[currentVideo].duration}</p>
+              <h4 className="font-semibold text-[#1a3351]">{videos[currentVideo].title}</h4>
+              <p className="text-[#2c5887] text-sm">{videos[currentVideo].duration}</p>
             </div>
           </div>
 
@@ -512,20 +503,20 @@ export default function Home() {
           <div className="flex items-center justify-center gap-4">
             <button
               onClick={() => setCurrentVideo((prev) => (prev === 0 ? videos.length - 1 : prev - 1))}
-              className="w-12 h-12 md:w-16 md:h-16 bg-white rounded-full shadow-md flex items-center justify-center hover:bg-teal-50 transition border-2 border-teal-300 cursor-pointer"
+              className="w-12 h-12 md:w-16 md:h-16 bg-white rounded-full shadow-md flex items-center justify-center hover:bg-blue-50 transition border-2 border-blue-300 cursor-pointer"
             >
-              <svg className="w-5 h-5 md:w-7 md:h-7 text-teal-600" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+              <svg className="w-5 h-5 md:w-7 md:h-7 text-[#2c5887]" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
               </svg>
             </button>
-            <span className="text-teal-600 font-bold text-base md:text-xl min-w-[60px] text-center">
+            <span className="text-[#2c5887] font-bold text-base md:text-xl min-w-[60px] text-center">
               {currentVideo + 1} / {videos.length}
             </span>
             <button
               onClick={() => setCurrentVideo((prev) => (prev === videos.length - 1 ? 0 : prev + 1))}
-              className="w-12 h-12 md:w-16 md:h-16 bg-white rounded-full shadow-md flex items-center justify-center hover:bg-teal-50 transition border-2 border-teal-300 cursor-pointer"
+              className="w-12 h-12 md:w-16 md:h-16 bg-white rounded-full shadow-md flex items-center justify-center hover:bg-blue-50 transition border-2 border-blue-300 cursor-pointer"
             >
-              <svg className="w-5 h-5 md:w-7 md:h-7 text-teal-600" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+              <svg className="w-5 h-5 md:w-7 md:h-7 text-[#2c5887]" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
               </svg>
             </button>
@@ -539,9 +530,9 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-10 items-center">
             {/* Description */}
             <div>
-              <p className="text-teal-600 text-base md:text-2xl font-semibold tracking-[0.2em] uppercase mb-2">About The Clinic</p>
-              <h2 className="text-teal-800 text-2xl md:text-3xl font-bold mb-4" style={{ fontFamily: 'var(--font-playfair)' }}>Your Neighborhood Chiropractor in Myrtle Beach</h2>
-              <div className="space-y-4 text-teal-700 leading-relaxed">
+              <p className="text-[#2c5887] text-base md:text-2xl font-semibold tracking-[0.2em] uppercase mb-2">About The Clinic</p>
+              <h2 className="text-[#1a3351] text-2xl md:text-3xl font-bold mb-4" style={{ fontFamily: 'var(--font-playfair)' }}>Your Neighborhood Chiropractor in Myrtle Beach</h2>
+              <div className="space-y-4 text-[#1e3a5f] leading-relaxed">
                 <p>
                   At The Happy Spine Studio, we offer personalized chiropractic care that supports your lifestyle and health goals. Whether you're managing chronic pain, recovering from an injury, or looking to improve your overall wellness, Dr. Jason Bell provides treatment plans tailored to your needs.
                 </p>
@@ -555,15 +546,15 @@ export default function Home() {
             </div>
             {/* Image */}
             <div className="relative">
-              <div className="bg-teal-100 rounded-2xl aspect-[4/3] flex items-center justify-center">
-                <div className="text-center text-teal-500">
-                  <div className="w-24 h-24 mx-auto bg-teal-200 rounded-full flex items-center justify-center mb-3">
+              <div className="bg-blue-100 rounded-2xl aspect-[4/3] flex items-center justify-center">
+                <div className="text-center text-blue-500">
+                  <div className="w-24 h-24 mx-auto bg-blue-200 rounded-full flex items-center justify-center mb-3">
                     <svg className="w-12 h-12" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
                     </svg>
                   </div>
                   <p className="text-sm font-medium">Dr. Bell in Action</p>
-                  <p className="text-xs text-teal-400">Photo Coming Soon</p>
+                  <p className="text-xs text-blue-400">Photo Coming Soon</p>
                 </div>
               </div>
             </div>
@@ -572,41 +563,41 @@ export default function Home() {
       </section>
 
       {/* Reviews Section */}
-      <section id="testimonials" className="py-10 md:py-16 px-4 bg-teal-50 scroll-mt-20">
+      <section id="testimonials" className="py-10 md:py-16 px-4 bg-blue-50 scroll-mt-20">
         <div className="max-w-4xl lg:max-w-5xl mx-auto">
-          <p className="text-teal-600 text-xl md:text-3xl font-semibold tracking-[0.2em] uppercase mb-2 text-center">Testimonials</p>
-          <h2 className="text-teal-800 text-2xl md:text-3xl font-bold mb-6 text-center" style={{ fontFamily: 'var(--font-playfair)' }}>See What People Say About Us</h2>
+          <p className="text-[#2c5887] text-xl md:text-3xl font-semibold tracking-[0.2em] uppercase mb-2 text-center">Testimonials</p>
+          <h2 className="text-[#1a3351] text-2xl md:text-3xl font-bold mb-6 text-center" style={{ fontFamily: 'var(--font-playfair)' }}>See What People Say About Us</h2>
           
           {/* Mobile: Fanned Cards */}
           <div className="md:hidden relative flex justify-center items-start h-[320px] mb-4 mt-8">
             {/* Fanned Review Cards */}
             <div className="relative flex justify-center" style={{ perspective: '1000px' }}>
               {/* Card 1 - Left */}
-              <div className="absolute bg-white rounded-xl shadow-lg p-5 w-52 h-64 border-2 border-teal-200 top-0" style={{ transform: 'rotate(-15deg) translateX(-95px)', transformOrigin: 'top center' }}>
+              <div className="absolute bg-white rounded-xl shadow-lg p-5 w-52 h-64 border-2 border-blue-200 top-0" style={{ transform: 'rotate(-15deg) translateX(-95px)', transformOrigin: 'top center' }}>
                 <div className="text-amber-400 text-base mb-2">★★★★★</div>
-                <p className="text-teal-700 text-sm leading-snug italic line-clamp-5">"{testimonials[2].text}"</p>
-                <p className="text-teal-800 font-semibold text-sm mt-3">{testimonials[2].name}</p>
+                <p className="text-[#1e3a5f] text-sm leading-snug italic line-clamp-5">"{testimonials[2].text}"</p>
+                <p className="text-[#1a3351] font-semibold text-sm mt-3">{testimonials[2].name}</p>
               </div>
               
               {/* Card 2 - Center Left */}
-              <div className="absolute bg-white rounded-xl shadow-lg p-5 w-52 h-64 border-2 border-teal-200 top-0" style={{ transform: 'rotate(-5deg) translateX(-30px)', transformOrigin: 'top center', zIndex: 1 }}>
+              <div className="absolute bg-white rounded-xl shadow-lg p-5 w-52 h-64 border-2 border-blue-200 top-0" style={{ transform: 'rotate(-5deg) translateX(-30px)', transformOrigin: 'top center', zIndex: 1 }}>
                 <div className="text-amber-400 text-base mb-2">★★★★★</div>
-                <p className="text-teal-700 text-sm leading-snug italic line-clamp-5">"{testimonials[3].text}"</p>
-                <p className="text-teal-800 font-semibold text-sm mt-3">{testimonials[3].name}</p>
+                <p className="text-[#1e3a5f] text-sm leading-snug italic line-clamp-5">"{testimonials[3].text}"</p>
+                <p className="text-[#1a3351] font-semibold text-sm mt-3">{testimonials[3].name}</p>
               </div>
               
               {/* Card 3 - Center (Featured) */}
-              <div className="absolute bg-white rounded-xl shadow-xl p-5 w-56 h-68 border-2 border-teal-400 top-0" style={{ transform: 'rotate(0deg)', transformOrigin: 'top center', zIndex: 2 }}>
+              <div className="absolute bg-white rounded-xl shadow-xl p-5 w-56 h-68 border-2 border-blue-400 top-0" style={{ transform: 'rotate(0deg)', transformOrigin: 'top center', zIndex: 2 }}>
                 <div className="text-amber-400 text-base mb-2">★★★★★</div>
-                <p className="text-teal-700 text-sm leading-snug italic line-clamp-6">"{testimonials[1].text}"</p>
-                <p className="text-teal-800 font-semibold text-sm mt-3">{testimonials[1].name}</p>
+                <p className="text-[#1e3a5f] text-sm leading-snug italic line-clamp-6">"{testimonials[1].text}"</p>
+                <p className="text-[#1a3351] font-semibold text-sm mt-3">{testimonials[1].name}</p>
               </div>
               
               {/* Card 4 - Right */}
-              <div className="absolute bg-white rounded-xl shadow-lg p-5 w-52 h-64 border-2 border-teal-200 top-0" style={{ transform: 'rotate(5deg) translateX(30px)', transformOrigin: 'top center', zIndex: 1 }}>
+              <div className="absolute bg-white rounded-xl shadow-lg p-5 w-52 h-64 border-2 border-blue-200 top-0" style={{ transform: 'rotate(5deg) translateX(30px)', transformOrigin: 'top center', zIndex: 1 }}>
                 <div className="text-amber-400 text-base mb-2">★★★★★</div>
-                <p className="text-teal-700 text-sm leading-snug italic line-clamp-5">"{testimonials[0].text}"</p>
-                <p className="text-teal-800 font-semibold text-sm mt-3">{testimonials[0].name}</p>
+                <p className="text-[#1e3a5f] text-sm leading-snug italic line-clamp-5">"{testimonials[0].text}"</p>
+                <p className="text-[#1a3351] font-semibold text-sm mt-3">{testimonials[0].name}</p>
               </div>
             </div>
           </div>
@@ -617,20 +608,20 @@ export default function Home() {
               {/* Left Arrow */}
               <button
                 onClick={() => setCurrentTestimonial((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1))}
-                className="w-14 h-14 bg-white rounded-full shadow-md flex items-center justify-center hover:bg-teal-50 transition border-2 border-teal-300 cursor-pointer flex-shrink-0"
+                className="w-14 h-14 bg-white rounded-full shadow-md flex items-center justify-center hover:bg-blue-50 transition border-2 border-blue-300 cursor-pointer flex-shrink-0"
               >
-                <svg className="w-6 h-6 text-teal-600" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                <svg className="w-6 h-6 text-[#2c5887]" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
                 </svg>
               </button>
 
               {/* Card */}
-              <div className="bg-white rounded-2xl shadow-lg p-8 border-2 border-teal-400 max-w-2xl w-full h-52 flex items-center">
+              <div className="bg-white rounded-2xl shadow-lg p-8 border-2 border-blue-400 max-w-2xl w-full h-52 flex items-center">
                 <div className="flex items-start gap-6">
                   <div className="text-amber-400 text-2xl flex-shrink-0">★★★★★</div>
                   <div>
-                    <p className="text-teal-700 text-lg leading-relaxed italic mb-4">"{testimonials[currentTestimonial].text}"</p>
-                    <p className="text-teal-800 font-bold text-lg">{testimonials[currentTestimonial].name}</p>
+                    <p className="text-[#1e3a5f] text-lg leading-relaxed italic mb-4">"{testimonials[currentTestimonial].text}"</p>
+                    <p className="text-[#1a3351] font-bold text-lg">{testimonials[currentTestimonial].name}</p>
                   </div>
                 </div>
               </div>
@@ -638,9 +629,9 @@ export default function Home() {
               {/* Right Arrow */}
               <button
                 onClick={() => setCurrentTestimonial((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1))}
-                className="w-14 h-14 bg-white rounded-full shadow-md flex items-center justify-center hover:bg-teal-50 transition border-2 border-teal-300 cursor-pointer flex-shrink-0"
+                className="w-14 h-14 bg-white rounded-full shadow-md flex items-center justify-center hover:bg-blue-50 transition border-2 border-blue-300 cursor-pointer flex-shrink-0"
               >
-                <svg className="w-6 h-6 text-teal-600" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                <svg className="w-6 h-6 text-[#2c5887]" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
                 </svg>
               </button>
@@ -653,7 +644,7 @@ export default function Home() {
                   key={index}
                   onClick={() => setCurrentTestimonial(index)}
                   className={`w-2.5 h-2.5 rounded-full transition-all cursor-pointer ${
-                    index === currentTestimonial ? "bg-teal-600 w-6" : "bg-teal-300"
+                    index === currentTestimonial ? "bg-[#2c5887] w-6" : "bg-blue-300"
                   }`}
                 />
               ))}
@@ -661,7 +652,7 @@ export default function Home() {
           </div>
 
           <div className="text-center mt-8">
-            <a href="/reviews" className="inline-flex items-center gap-2 md:gap-3 text-teal-600 font-semibold hover:text-teal-700 transition text-lg md:text-xl tracking-[0.1em] uppercase cursor-pointer">
+            <a href="/reviews" className="inline-flex items-center gap-2 md:gap-3 text-[#2c5887] font-semibold hover:text-[#1e3a5f] transition text-lg md:text-xl tracking-[0.1em] uppercase cursor-pointer">
               View All Reviews
               <svg className="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
@@ -674,21 +665,21 @@ export default function Home() {
       {/* Pricing Section */}
       <section id="pricing" className="py-10 md:py-16 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
-          <p className="text-teal-600 text-xl md:text-3xl font-semibold tracking-[0.2em] uppercase mb-4 text-center">Pricing & Plans</p>
-          <h2 className="text-teal-800 text-2xl md:text-3xl font-bold mb-2 md:mb-8 text-center" style={{ fontFamily: 'var(--font-playfair)' }}>
+          <p className="text-[#2c5887] text-xl md:text-3xl font-semibold tracking-[0.2em] uppercase mb-4 text-center">Pricing & Plans</p>
+          <h2 className="text-[#1a3351] text-2xl md:text-3xl font-bold mb-2 md:mb-8 text-center" style={{ fontFamily: 'var(--font-playfair)' }}>
 Happy{" "}Pricing That Fits Your Budget
           </h2>
           <div className="grid md:grid-cols-2 gap-6 mb-6">
             {/* Studio Visits */}
             <div className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden">
-              <div className="bg-teal-700 px-5 py-3">
+              <div className="bg-[#1e3a5f] px-5 py-3">
                 <h3 className="text-white font-bold text-lg md:text-xl" style={{ fontFamily: 'var(--font-playfair)' }}>Studio Visits</h3>
               </div>
               <div className="p-5 md:p-4 space-y-4 md:space-y-3">
-                <div className="flex items-center justify-between bg-gradient-to-r from-pink-500 via-pink-400 to-pink-500 text-white rounded-xl p-4 md:p-3 shadow-lg">
+                <div className="flex items-center justify-between bg-gradient-to-r from-[#e0935a] via-[#e5a578] to-[#e0935a] text-white rounded-xl p-4 md:p-3 shadow-lg">
                   <div>
                     <p className="font-bold text-lg">New Patient Special</p>
-                    <p className="text-pink-100 text-sm">Consult, exam & adjustment</p>
+                    <p className="text-[#fae9dc] text-sm">Consult, exam & adjustment</p>
                   </div>
                   <div className="text-3xl md:text-2xl font-bold bg-gradient-to-r from-yellow-300 via-amber-200 to-yellow-300 bg-clip-text text-transparent drop-shadow-[0_0_10px_rgba(251,191,36,0.9)]">$29</div>
                 </div>
@@ -711,7 +702,7 @@ Happy{" "}Pricing That Fits Your Budget
 
             {/* Mobile Chiropractic */}
             <div className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden">
-              <div className="bg-teal-700 px-5 py-3 flex items-start justify-between">
+              <div className="bg-[#1e3a5f] px-5 py-3 flex items-start justify-between">
                 <h3 className="text-white font-bold text-lg md:text-xl leading-tight" style={{ fontFamily: 'var(--font-playfair)' }}>
                   Concierge Mobile<br />
                   <span className="text-white">Chiropractic</span>
@@ -720,21 +711,21 @@ Happy{" "}Pricing That Fits Your Budget
               </div>
               <div className="p-5 md:p-4">
                 {/* Mobile: stacked text + mascot */}
-                <p className="md:hidden text-gray-700 mb-4">Can't make it to the studio? <span className="font-semibold text-teal-700">Dr. Bell comes directly to your home.</span></p>
+                <p className="md:hidden text-gray-700 mb-4">Can't make it to the studio? <span className="font-semibold text-[#1e3a5f]">Dr. Bell comes directly to your home.</span></p>
                 <div className="md:hidden flex justify-center mb-4">
-                  <img src="/images/mascot-driving.png" alt="Dr. Bell driving to you" className="w-48 h-auto" />
+                  <img src="/images/mascot-driving-v2.png" alt="Dr. Bell driving to you" className="w-48 h-auto" />
                 </div>
                 
                 {/* Desktop: text left, mascot right */}
                 <div className="hidden md:flex items-center gap-6 mb-4">
                   <div className="flex-1">
                     <p className="text-gray-700 text-xl mb-1">Can't make it to the studio?</p>
-                    <p className="font-bold text-teal-700 text-xl">Dr. Bell comes directly to your home.</p>
+                    <p className="font-bold text-[#1e3a5f] text-xl">Dr. Bell comes directly to your home.</p>
                   </div>
-                  <img src="/images/mascot-driving.png" alt="Dr. Bell driving to you" className="w-44 h-auto flex-shrink-0" />
+                  <img src="/images/mascot-driving-v2.png" alt="Dr. Bell driving to you" className="w-44 h-auto flex-shrink-0" />
                 </div>
-                <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-xl p-4 md:p-3 text-center border border-teal-200 mb-4 md:mb-3">
-                  <div className="text-teal-800 text-4xl md:text-3xl font-bold">$40 <span className="text-2xl md:text-xl font-normal md:font-semibold text-teal-600">+ travel fee</span></div>
+                <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-4 md:p-3 text-center border border-blue-200 mb-4 md:mb-3">
+                  <div className="text-[#1a3351] text-4xl md:text-3xl font-bold">$40 <span className="text-2xl md:text-xl font-normal md:font-semibold text-[#2c5887]">+ travel fee</span></div>
                 </div>
                 <div className="bg-gray-50 rounded-xl p-4 md:p-3 border border-gray-200 mb-4 md:mb-3">
                   <div className="flex items-center gap-2 mb-3 md:mb-2">
@@ -742,13 +733,13 @@ Happy{" "}Pricing That Fits Your Budget
                     <p className="text-gray-800 font-semibold">Available</p>
                   </div>
                   <div className="flex justify-center gap-4">
-                    <div className="bg-white px-5 md:px-6 py-3 md:py-2 rounded-xl font-bold text-sm shadow-md border-2 border-teal-400">
-                      <p className="text-teal-400 text-sm uppercase tracking-wider mb-0.5">Every</p>
-                      <p className="text-teal-600">Tuesday</p>
+                    <div className="bg-white px-5 md:px-6 py-3 md:py-2 rounded-xl font-bold text-sm shadow-md border-2 border-blue-400">
+                      <p className="text-blue-400 text-sm uppercase tracking-wider mb-0.5">Every</p>
+                      <p className="text-[#2c5887]">Tuesday</p>
                     </div>
-                    <div className="bg-white px-5 md:px-6 py-3 md:py-2 rounded-xl font-bold text-sm shadow-md border-2 border-teal-400">
-                      <p className="text-teal-400 text-sm uppercase tracking-wider mb-0.5">Every</p>
-                      <p className="text-teal-600">Thursday</p>
+                    <div className="bg-white px-5 md:px-6 py-3 md:py-2 rounded-xl font-bold text-sm shadow-md border-2 border-blue-400">
+                      <p className="text-blue-400 text-sm uppercase tracking-wider mb-0.5">Every</p>
+                      <p className="text-[#2c5887]">Thursday</p>
                     </div>
                   </div>
                 </div>
@@ -759,14 +750,14 @@ Happy{" "}Pricing That Fits Your Budget
 
           {/* Wellness Plans */}
           <div className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden">
-            <div className="bg-teal-700 px-5 py-3">
+            <div className="bg-[#1e3a5f] px-5 py-3">
               <h3 className="text-white font-bold text-lg md:text-xl" style={{ fontFamily: 'var(--font-playfair)' }}>Wellness Plans</h3>
             </div>
             <div className="p-5 md:p-4">
               <div className="grid md:grid-cols-2 gap-6 md:gap-4">
                 {/* Left - Bullet Points */}
                 {/* Mobile */}
-                <ul className="md:hidden space-y-3 list-disc list-inside marker:text-teal-500">
+                <ul className="md:hidden space-y-3 list-disc list-inside marker:text-blue-500">
                   <li className="text-gray-700">Wellness Plans offer up to <span className="font-semibold">4 visits per month</span></li>
                   <li className="text-gray-700">Extra visits <span className="font-semibold">$10 each</span></li>
                   <li className="text-gray-700">Month-to-month flexibility</li>
@@ -776,7 +767,7 @@ Happy{" "}Pricing That Fits Your Budget
                 <div className="hidden md:flex flex-col">
                   {/* Bullet 1: 4 visits per month */}
                   <div className="flex items-start gap-3 mt-1">
-                    <span className="text-teal-500 text-4xl leading-none">•</span>
+                    <span className="text-blue-500 text-4xl leading-none">•</span>
                     <div>
                       <p className="text-gray-700 text-xl">Wellness Plans offer up to</p>
                       <p className="text-gray-700 text-xl font-semibold">4 visits per month</p>
@@ -784,54 +775,54 @@ Happy{" "}Pricing That Fits Your Budget
                   </div>
                   {/* Bullet 2: $10 each */}
                   <div className="flex items-center gap-3 mt-6">
-                    <span className="text-teal-500 text-4xl leading-none">•</span>
+                    <span className="text-blue-500 text-4xl leading-none">•</span>
                     <p className="text-gray-700 text-xl">Extra visits <span className="font-semibold">$10 each</span></p>
                   </div>
                   {/* Bullet 3: Month-to-month */}
                   <div className="flex items-center gap-3 mt-8">
-                    <span className="text-teal-500 text-4xl leading-none">•</span>
+                    <span className="text-blue-500 text-4xl leading-none">•</span>
                     <p className="text-gray-700 text-xl">Month-to-month flexibility</p>
                   </div>
                   {/* Bullet 4: No contracts */}
                   <div className="flex items-center gap-3 mt-8">
-                    <span className="text-teal-500 text-4xl leading-none">•</span>
+                    <span className="text-blue-500 text-4xl leading-none">•</span>
                     <p className="text-gray-700 text-xl">No long-term contracts</p>
                   </div>
                 </div>
                 {/* Right - Stacked Boxes */}
                 <div className="space-y-4 md:space-y-3">
                   {/* Adult */}
-                  <div className="bg-white rounded-xl p-5 md:p-4 flex items-center justify-between border-2 border-teal-400 shadow-sm">
+                  <div className="bg-white rounded-xl p-5 md:p-4 flex items-center justify-between border-2 border-blue-400 shadow-sm">
                     <div>
-                      <p className="text-teal-800 font-bold text-lg md:text-base mb-1">Adult Wellness</p>
-                      <ul className="list-disc list-inside marker:text-teal-500 space-y-0.5">
-                        <li className="text-teal-600 text-base md:text-sm font-medium">Health insurance not accepted</li>
-                        <li className="text-teal-600 text-base md:text-sm font-medium">HSA & FSA approved</li>
+                      <p className="text-[#1a3351] font-bold text-lg md:text-base mb-1">Adult Wellness</p>
+                      <ul className="list-disc list-inside marker:text-blue-500 space-y-0.5">
+                        <li className="text-[#2c5887] text-base md:text-sm font-medium">Health insurance not accepted</li>
+                        <li className="text-[#2c5887] text-base md:text-sm font-medium">HSA & FSA approved</li>
                       </ul>
                     </div>
-                    <p className="text-teal-700 text-3xl md:text-2xl font-bold">$70<span className="text-lg md:text-base font-semibold text-gray-500">/mo</span></p>
+                    <p className="text-[#1e3a5f] text-3xl md:text-2xl font-bold">$70<span className="text-lg md:text-base font-semibold text-gray-500">/mo</span></p>
                   </div>
                   {/* Public Service */}
-                  <div className="bg-white rounded-xl p-5 md:p-4 flex items-center justify-between border-2 border-teal-400 shadow-sm">
+                  <div className="bg-white rounded-xl p-5 md:p-4 flex items-center justify-between border-2 border-blue-400 shadow-sm">
                     <div>
-                      <p className="text-teal-800 font-bold text-lg md:text-base mb-1">Public Service Wellness</p>
-                      <ul className="list-disc list-inside marker:text-teal-500 space-y-0.5">
-                        <li className="text-teal-600 text-base md:text-sm font-medium">Military</li>
-                        <li className="text-teal-600 text-base md:text-sm font-medium">First Responders</li>
-                        <li className="text-teal-600 text-base md:text-sm font-medium">Educators</li>
+                      <p className="text-[#1a3351] font-bold text-lg md:text-base mb-1">Public Service Wellness</p>
+                      <ul className="list-disc list-inside marker:text-blue-500 space-y-0.5">
+                        <li className="text-[#2c5887] text-base md:text-sm font-medium">Military</li>
+                        <li className="text-[#2c5887] text-base md:text-sm font-medium">First Responders</li>
+                        <li className="text-[#2c5887] text-base md:text-sm font-medium">Educators</li>
                       </ul>
                     </div>
-                    <p className="text-teal-700 text-3xl md:text-2xl font-bold">$60<span className="text-lg md:text-base font-semibold text-gray-500">/mo</span></p>
+                    <p className="text-[#1e3a5f] text-3xl md:text-2xl font-bold">$60<span className="text-lg md:text-base font-semibold text-gray-500">/mo</span></p>
                   </div>
                   {/* Youth */}
-                  <div className="bg-white rounded-xl p-5 md:p-4 flex items-center justify-between border-2 border-teal-400 shadow-sm">
+                  <div className="bg-white rounded-xl p-5 md:p-4 flex items-center justify-between border-2 border-blue-400 shadow-sm">
                     <div>
-                      <p className="text-teal-800 font-bold text-lg md:text-base mb-1">Youth Wellness</p>
-                      <ul className="list-disc list-inside marker:text-teal-500">
-                        <li className="text-teal-600 text-base md:text-sm font-medium">Ages 17 & under</li>
+                      <p className="text-[#1a3351] font-bold text-lg md:text-base mb-1">Youth Wellness</p>
+                      <ul className="list-disc list-inside marker:text-blue-500">
+                        <li className="text-[#2c5887] text-base md:text-sm font-medium">Ages 17 & under</li>
                       </ul>
                     </div>
-                    <p className="text-teal-700 text-3xl md:text-2xl font-bold">$45<span className="text-lg md:text-base font-semibold text-gray-500">/mo</span></p>
+                    <p className="text-[#1e3a5f] text-3xl md:text-2xl font-bold">$45<span className="text-lg md:text-base font-semibold text-gray-500">/mo</span></p>
                   </div>
                 </div>
               </div>
@@ -849,20 +840,20 @@ Happy{" "}Pricing That Fits Your Budget
           <div className="grid md:grid-cols-2 gap-8 md:gap-12">
             {/* Studio Hours */}
             <div className="bg-white rounded-xl border border-gray-200 p-5 md:p-8 shadow-sm">
-              <h3 className="text-teal-700 font-bold text-lg md:text-2xl mb-4 md:mb-6">Studio Hours</h3>
+              <h3 className="text-[#1e3a5f] font-bold text-lg md:text-2xl mb-4 md:mb-6">Studio Hours</h3>
               <div className="space-y-2 md:space-y-3 text-sm md:text-lg">
-                <div className="flex justify-between"><span className="text-gray-600">Monday</span><span className="text-teal-600 font-medium">10am – 7pm</span></div>
-                <div className="flex justify-between"><span className="text-gray-600">Tuesday</span><span className="text-teal-600 font-medium">Mobile</span></div>
-                <div className="flex justify-between"><span className="text-gray-600">Wednesday</span><span className="text-teal-600 font-medium">10am – 7pm</span></div>
-                <div className="flex justify-between"><span className="text-gray-600">Thursday</span><span className="text-teal-600 font-medium">Mobile</span></div>
-                <div className="flex justify-between"><span className="text-gray-600">Friday</span><span className="text-teal-600 font-medium">10am – 7pm</span></div>
-                <div className="flex justify-between"><span className="text-gray-600">Saturday</span><span className="text-teal-600 font-medium">10am – 2pm</span></div>
+                <div className="flex justify-between"><span className="text-gray-600">Monday</span><span className="text-[#2c5887] font-medium">10am – 7pm</span></div>
+                <div className="flex justify-between"><span className="text-gray-600">Tuesday</span><span className="text-[#2c5887] font-medium">Mobile</span></div>
+                <div className="flex justify-between"><span className="text-gray-600">Wednesday</span><span className="text-[#2c5887] font-medium">10am – 7pm</span></div>
+                <div className="flex justify-between"><span className="text-gray-600">Thursday</span><span className="text-[#2c5887] font-medium">Mobile</span></div>
+                <div className="flex justify-between"><span className="text-gray-600">Friday</span><span className="text-[#2c5887] font-medium">10am – 7pm</span></div>
+                <div className="flex justify-between"><span className="text-gray-600">Saturday</span><span className="text-[#2c5887] font-medium">10am – 2pm</span></div>
                 <div className="flex justify-between"><span className="text-gray-600">Sunday</span><span className="text-red-500 font-medium">Closed</span></div>
               </div>
             </div>
             {/* Location */}
             <div className="bg-white rounded-xl border border-gray-200 p-5 md:p-8 shadow-sm">
-              <h3 className="text-teal-700 font-bold text-lg md:text-2xl mb-4 md:mb-6">Find Us</h3>
+              <h3 className="text-[#1e3a5f] font-bold text-lg md:text-2xl mb-4 md:mb-6">Find Us</h3>
               <a href="https://maps.google.com/?q=207+Chartwell+Ct+Myrtle+Beach+SC+29588" target="_blank" rel="noopener noreferrer" className="flex items-start gap-3 md:gap-4 mb-4 md:mb-6 hover:opacity-80 transition">
                 <span className="text-2xl md:text-4xl">📍</span>
                 <div>
@@ -874,7 +865,7 @@ Happy{" "}Pricing That Fits Your Budget
                 href="https://maps.google.com/?q=207+Chartwell+Ct+Myrtle+Beach+SC+29588"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-teal-600 text-white px-4 md:px-6 py-2 md:py-3 rounded-lg font-medium text-sm md:text-base hover:bg-teal-700 transition cursor-pointer"
+                className="inline-flex items-center gap-2 bg-[#2c5887] text-white px-4 md:px-6 py-2 md:py-3 rounded-lg font-medium text-sm md:text-base hover:bg-[#1e3a5f] transition cursor-pointer"
               >
                 Get Directions →
               </a>
@@ -884,7 +875,7 @@ Happy{" "}Pricing That Fits Your Budget
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-10 md:py-16 px-4 bg-gradient-to-br from-cyan-500 to-teal-600 scroll-mt-20">
+      <section id="contact" className="py-10 md:py-16 px-4 bg-gradient-to-br from-cyan-500 to-[#2c5887] scroll-mt-20">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-2xl md:text-4xl font-bold text-white mb-4 md:mb-6">
             Ready to Make Your Spine Happy?
@@ -916,58 +907,55 @@ Happy{" "}Pricing That Fits Your Budget
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 py-12 px-4">
+      <footer className="bg-gray-100 py-12 px-4 border-t border-gray-200">
         <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-4 gap-8 mb-8">
-            <div className="md:col-span-2">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 bg-gray-700 border border-dashed border-gray-500 rounded-lg flex items-center justify-center text-xs text-gray-400">
-                  LOGO
-                </div>
-                <div className="text-xl font-bold text-white">The Happy Spine Studio</div>
+          <div className="grid md:grid-cols-4 gap-8 mb-8 items-start">
+            <div className="md:col-span-2 md:-mt-8">
+              <div className="mb-4">
+                <img src="/images/logo-full.png" alt="The Happy Spine Studio" className="h-24 md:h-32 w-auto" />
               </div>
-              <p className="text-gray-400 mb-4">
+              <p className="text-[#2c5887] mb-4 italic">
                 "Make Your Spine Happy."
               </p>
-              <p className="text-gray-500 text-sm">
+              <p className="text-gray-600 text-sm">
                 Personalized chiropractic care in Myrtle Beach, SC.<br />
                 Walk-ins welcome. No appointments necessary.
               </p>
             </div>
             <div>
-              <h4 className="text-white font-medium mb-4">Contact</h4>
-              <p className="text-teal-400">
+              <h4 className="text-[#2c5887] font-semibold mb-4">Contact</h4>
+              <p className="text-gray-700">
                 (843) 855-1300<br />
                 contact@happyspine.com
               </p>
             </div>
             <div>
-              <h4 className="text-white font-medium mb-4">Address</h4>
-              <a href="https://maps.google.com/?q=207+Chartwell+Ct+Myrtle+Beach+SC+29588" target="_blank" rel="noopener noreferrer" className="text-teal-400 mb-4 block hover:text-teal-300 transition">
+              <h4 className="text-[#2c5887] font-semibold mb-4">Address</h4>
+              <a href="https://maps.google.com/?q=207+Chartwell+Ct+Myrtle+Beach+SC+29588" target="_blank" rel="noopener noreferrer" className="text-gray-700 mb-4 block hover:text-[#2c5887] transition">
                 207 Chartwell Ct.<br />
                 Myrtle Beach, SC 29588
               </a>
-              <h4 className="text-white font-medium mb-3">Follow Us</h4>
+              <h4 className="text-[#2c5887] font-semibold mb-3">Follow Us</h4>
               <div className="flex gap-3">
-                <a href="#" className="w-9 h-9 bg-gray-800 hover:bg-teal-600 rounded-lg flex items-center justify-center transition">
-                  <svg className="w-5 h-5 text-teal-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                <a href="#" className="w-9 h-9 bg-white border border-gray-300 hover:bg-[#2c5887] hover:border-[#2c5887] rounded-lg flex items-center justify-center transition group">
+                  <svg className="w-5 h-5 text-[#2c5887] group-hover:text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
                 </a>
-                <a href="#" className="w-9 h-9 bg-gray-800 hover:bg-teal-600 rounded-lg flex items-center justify-center transition">
-                  <svg className="w-5 h-5 text-teal-400" fill="currentColor" viewBox="0 0 24 24"><path d="M22.23 5.924c-.806.358-1.67.6-2.577.708a4.515 4.515 0 001.98-2.49 9.02 9.02 0 01-2.86 1.093 4.507 4.507 0 00-7.677 4.108 12.787 12.787 0 01-9.29-4.71 4.507 4.507 0 001.394 6.014 4.48 4.48 0 01-2.04-.563v.057a4.507 4.507 0 003.616 4.415 4.52 4.52 0 01-2.034.077 4.51 4.51 0 004.208 3.128 9.038 9.038 0 01-5.6 1.93c-.364 0-.723-.021-1.077-.063a12.746 12.746 0 006.92 2.027c8.3 0 12.84-6.876 12.84-12.84 0-.195-.005-.39-.014-.583a9.172 9.172 0 002.252-2.336z"/></svg>
+                <a href="#" className="w-9 h-9 bg-white border border-gray-300 hover:bg-[#2c5887] hover:border-[#2c5887] rounded-lg flex items-center justify-center transition group">
+                  <svg className="w-5 h-5 text-[#2c5887] group-hover:text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M22.23 5.924c-.806.358-1.67.6-2.577.708a4.515 4.515 0 001.98-2.49 9.02 9.02 0 01-2.86 1.093 4.507 4.507 0 00-7.677 4.108 12.787 12.787 0 01-9.29-4.71 4.507 4.507 0 001.394 6.014 4.48 4.48 0 01-2.04-.563v.057a4.507 4.507 0 003.616 4.415 4.52 4.52 0 01-2.034.077 4.51 4.51 0 004.208 3.128 9.038 9.038 0 01-5.6 1.93c-.364 0-.723-.021-1.077-.063a12.746 12.746 0 006.92 2.027c8.3 0 12.84-6.876 12.84-12.84 0-.195-.005-.39-.014-.583a9.172 9.172 0 002.252-2.336z"/></svg>
                 </a>
-                <a href="#" className="w-9 h-9 bg-gray-800 hover:bg-teal-600 rounded-lg flex items-center justify-center transition">
-                  <svg className="w-5 h-5 text-teal-400" fill="currentColor" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+                <a href="#" className="w-9 h-9 bg-white border border-gray-300 hover:bg-[#2c5887] hover:border-[#2c5887] rounded-lg flex items-center justify-center transition group">
+                  <svg className="w-5 h-5 text-[#2c5887] group-hover:text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
                 </a>
-                <a href="#" className="w-9 h-9 bg-gray-800 hover:bg-teal-600 rounded-lg flex items-center justify-center transition">
-                  <svg className="w-5 h-5 text-teal-400" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                <a href="#" className="w-9 h-9 bg-white border border-gray-300 hover:bg-[#2c5887] hover:border-[#2c5887] rounded-lg flex items-center justify-center transition group">
+                  <svg className="w-5 h-5 text-[#2c5887] group-hover:text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
                 </a>
-                <a href="#" className="w-9 h-9 bg-gray-800 hover:bg-teal-600 rounded-lg flex items-center justify-center transition">
-                  <svg className="w-5 h-5 text-teal-400" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                <a href="#" className="w-9 h-9 bg-white border border-gray-300 hover:bg-[#2c5887] hover:border-[#2c5887] rounded-lg flex items-center justify-center transition group">
+                  <svg className="w-5 h-5 text-[#2c5887] group-hover:text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
                 </a>
               </div>
             </div>
           </div>
-          <div className="border-t border-gray-800 pt-8">
+          <div className="border-t border-gray-300 pt-8">
             <p className="text-gray-500 text-sm text-center">
               © 2026 The Happy Spine Studio. All rights reserved.
             </p>
