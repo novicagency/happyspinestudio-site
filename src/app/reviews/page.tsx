@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
   return (
@@ -84,6 +84,11 @@ const reviews = [
 
 export default function ReviewsPage() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  // Scroll to top on page load/refresh
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="min-h-screen bg-white">

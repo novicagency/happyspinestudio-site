@@ -169,6 +169,11 @@ export default function Home() {
     return () => clearInterval(interval);
   }, []);
 
+  // Scroll to top on page load/refresh
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const actionImages = [
     { src: "/images/action_1.webp", alt: "Dr. Bell adjusting a patient" },
     { src: "/images/action_2.webp", alt: "Chiropractic consultation" },
@@ -230,9 +235,13 @@ export default function Home() {
               </svg>
             </button>
             {/* Logo - Mobile/Tablet */}
-            <img src="/images/logo-full.png" alt="The Happy Spine Studio" className="lg:hidden h-14 min-[360px]:h-20 md:h-28 w-auto -my-2 min-[360px]:-my-4 md:-my-6" />
+            <a href="#" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
+              <img src="/images/logo-full.png" alt="The Happy Spine Studio" className="lg:hidden h-14 min-[360px]:h-20 md:h-28 w-auto -my-2 min-[360px]:-my-4 md:-my-6" />
+            </a>
             {/* Logo - Desktop */}
-            <img src="/images/logo-full.png" alt="The Happy Spine Studio" className="hidden lg:block h-32 w-auto -my-6" />
+            <a href="#" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
+              <img src="/images/logo-full.png" alt="The Happy Spine Studio" className="hidden lg:block h-32 w-auto -my-6" />
+            </a>
           </div>
           
           {/* Desktop Nav Links */}
