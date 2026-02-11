@@ -171,6 +171,9 @@ export default function Home() {
 
   // Scroll to top on page load/refresh
   useEffect(() => {
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
     window.scrollTo(0, 0);
   }, []);
 
