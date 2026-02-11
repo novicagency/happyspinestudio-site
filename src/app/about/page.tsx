@@ -4,7 +4,7 @@ import { useState } from "react";
 
 function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
   return (
-    <div className={`fixed inset-0 z-50 md:hidden transition-opacity duration-300 ${isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
+    <div className={`fixed inset-0 z-50 lg:hidden transition-opacity duration-300 ${isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
       <div className="absolute inset-0 bg-black/50" onClick={onClose} />
       <div className={`absolute left-0 top-0 bottom-0 w-72 bg-white shadow-xl transition-transform duration-300 ease-out ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}>
         <div className="p-6">
@@ -23,11 +23,11 @@ function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
           </nav>
           <div className="mt-6 -mx-6 -mb-6 p-5 bg-[#2c5887]">
             <div className="space-y-3">
-              <a href="tel:843-855-1300" className="flex items-center gap-3 text-white hover:text-[#2c5887] transition">
+              <a href="tel:843-831-0033" className="flex items-center gap-3 text-white hover:text-[#2c5887] transition">
                 <svg className="w-5 h-5 text-[#6b8db5]" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
-                <span className="font-semibold">(843) 855-1300</span>
+                <span className="font-semibold">(843) 831-0033 <span className="font-normal text-[#6b8db5] text-sm">Office</span></span>
               </a>
               <a href="mailto:contact@happyspine.com" className="flex items-center gap-3 text-white hover:text-[#2c5887] transition">
                 <svg className="w-5 h-5 text-[#6b8db5]" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
@@ -56,21 +56,21 @@ export default function AboutPage() {
           <div className="flex items-center gap-3">
             <button 
               onClick={() => setMobileMenuOpen(true)}
-              className="md:hidden p-2 -ml-2 text-gray-800 cursor-pointer"
+              className="lg:hidden p-2 -ml-2 text-gray-800 cursor-pointer"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
               </svg>
             </button>
-            <a href="/" className="md:hidden">
-              <img src="/images/logo-full.png" alt="The Happy Spine Studio" className="h-20 w-auto -my-4 ml-2" style={{ transform: 'scaleX(1.3)' }} />
+            <a href="/" className="lg:hidden">
+              <img src="/images/logo-full.png" alt="The Happy Spine Studio" className="h-14 min-[360px]:h-20 md:h-28 w-auto -my-2 min-[360px]:-my-4 md:-my-6" />
             </a>
-            <a href="/" className="hidden md:block">
+            <a href="/" className="hidden lg:block">
               <img src="/images/logo-full.png" alt="The Happy Spine Studio" className="h-32 w-auto -my-6" />
             </a>
           </div>
           
-          <div className="hidden md:flex gap-8 text-gray-600 font-medium text-lg">
+          <div className="hidden lg:flex gap-8 text-gray-600 font-medium text-lg">
             <a href="/about" className="hover:text-[#2c5887] transition text-[#2c5887]">About</a>
             <a href="/#pricing" className="hover:text-[#2c5887] transition">Pricing</a>
             <a href="/#testimonials" className="hover:text-[#2c5887] transition">Reviews</a>
@@ -80,9 +80,9 @@ export default function AboutPage() {
           
           <a
             href="/#pricing"
-            className="bg-[#2c5887] text-white px-2 md:px-5 py-2.5 md:py-3 rounded font-semibold hover:bg-[#1e3a5f] transition text-sm md:text-base shadow-sm cursor-pointer"
+            className="bg-[#2c5887] text-white px-2 py-1.5 md:px-4 md:py-2.5 lg:px-5 lg:py-3 rounded font-semibold hover:bg-[#1e3a5f] transition text-xs md:text-sm lg:text-base shadow-sm cursor-pointer"
           >
-            View Services
+            View Plans
           </a>
         </div>
       </nav>
@@ -112,7 +112,7 @@ export default function AboutPage() {
           {/* Quick Info */}
           <div className="flex justify-center gap-4 mb-8">
             <div className="bg-white rounded-xl px-4 py-3 shadow-md border border-[#2c5887] text-center">
-              <p className="text-2xl font-bold text-[#1e4163]">10+</p>
+              <p className="text-2xl font-bold text-[#1e4163]">26+</p>
               <p className="text-sm text-gray-600">Years Experience</p>
             </div>
             <div className="bg-white rounded-xl px-4 py-3 shadow-md border border-[#2c5887] text-center">
@@ -152,13 +152,13 @@ export default function AboutPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
-              href="tel:843-855-1300"
+              href="tel:843-831-0033"
               className="bg-white/20 text-white border-2 border-white px-6 md:px-8 py-3 md:py-4 rounded-xl font-semibold hover:bg-white/30 transition flex items-center gap-3 md:text-lg cursor-pointer"
             >
               <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
               </svg>
-              <span>(843) 855-1300</span>
+              <span>(843) 831-0033</span>
             </a>
             <a
               href="mailto:contact@happyspine.com"
@@ -176,8 +176,8 @@ export default function AboutPage() {
       {/* Footer */}
       <footer className="bg-gray-100 py-12 px-4 border-t border-gray-200">
         <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-4 gap-8 mb-8 items-start">
-            <div className="md:col-span-2 md:-mt-8">
+          <div className="grid lg:grid-cols-4 gap-8 mb-8 items-start">
+            <div className="lg:col-span-2 lg:-mt-8">
               <div className="mb-4">
                 <img src="/images/logo-full.png" alt="The Happy Spine Studio" className="h-24 md:h-32 w-auto" />
               </div>
@@ -189,10 +189,15 @@ export default function AboutPage() {
                 Walk-ins welcome. No appointments necessary.
               </p>
             </div>
-            <div>
+            <div className="min-w-0">
               <h4 className="text-[#2c5887] font-semibold mb-4">Contact</h4>
               <p className="text-gray-700">
-                (843) 855-1300<br />
+                <span className="text-gray-500 text-sm">Office:</span> (843) 831-0033
+              </p>
+              <p className="text-gray-700">
+                <span className="text-gray-500 text-sm">Mobile:</span> (843) 855-1300
+              </p>
+              <p className="text-gray-700 break-all">
                 contact@happyspine.com
               </p>
             </div>

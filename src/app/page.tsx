@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from "react";
 
 function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
   return (
-    <div className={`fixed inset-0 z-50 md:hidden transition-opacity duration-300 ${isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
+    <div className={`fixed inset-0 z-50 lg:hidden transition-opacity duration-300 ${isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
       {/* Backdrop */}
       <div className="absolute inset-0 bg-black/50" onClick={onClose} />
       {/* Menu */}
@@ -25,11 +25,11 @@ function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
           </nav>
           <div className="mt-6 -mx-6 -mb-6 p-5 bg-[#2c5887]">
             <div className="space-y-3">
-              <a href="tel:843-855-1300" className="flex items-center gap-3 text-white hover:text-blue-100 transition">
+              <a href="tel:843-831-0033" className="flex items-center gap-3 text-white hover:text-blue-100 transition">
                 <svg className="w-5 h-5 text-blue-200" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
-                <span className="font-semibold">(843) 855-1300</span>
+                <span className="font-semibold">(843) 831-0033 <span className="font-normal text-blue-200 text-sm">Office</span></span>
               </a>
               <a href="mailto:contact@happyspine.com" className="flex items-center gap-3 text-white hover:text-blue-100 transition">
                 <svg className="w-5 h-5 text-blue-200" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
@@ -223,20 +223,20 @@ export default function Home() {
             {/* Hamburger - Mobile Only */}
             <button 
               onClick={() => setMobileMenuOpen(true)}
-              className="md:hidden p-2 -ml-2 text-gray-800"
+              className="lg:hidden p-2 -ml-2 text-gray-800"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
               </svg>
             </button>
-            {/* Logo - Mobile */}
-            <img src="/images/logo-full.png" alt="The Happy Spine Studio" className="md:hidden h-20 w-auto -my-4 ml-2" style={{ transform: 'scaleX(1.3)' }} />
+            {/* Logo - Mobile/Tablet */}
+            <img src="/images/logo-full.png" alt="The Happy Spine Studio" className="lg:hidden h-14 min-[360px]:h-20 md:h-28 w-auto -my-2 min-[360px]:-my-4 md:-my-6" />
             {/* Logo - Desktop */}
-            <img src="/images/logo-full.png" alt="The Happy Spine Studio" className="hidden md:block h-32 w-auto -my-6" />
+            <img src="/images/logo-full.png" alt="The Happy Spine Studio" className="hidden lg:block h-32 w-auto -my-6" />
           </div>
           
           {/* Desktop Nav Links */}
-          <div className="hidden md:flex gap-8 text-gray-600 font-medium text-lg">
+          <div className="hidden lg:flex gap-8 text-gray-600 font-medium text-lg">
             <a href="/about" className="hover:text-[#2c5887] transition">About</a>
             <a href="#pricing" className="hover:text-[#2c5887] transition">Pricing</a>
             <a href="#testimonials" className="hover:text-[#2c5887] transition">Reviews</a>
@@ -244,12 +244,12 @@ export default function Home() {
             <a href="#contact" className="hover:text-[#2c5887] transition">Contact</a>
           </div>
           
-          {/* CTA Button - Both Mobile & Desktop */}
+          {/* CTA Button - Mobile/Tablet/Desktop */}
           <a
             href="#pricing"
-            className="bg-[#2c5887] text-white px-2 md:px-5 py-2.5 md:py-3 rounded font-semibold hover:bg-[#1e3a5f] transition text-sm md:text-base shadow-sm"
+            className="bg-[#2c5887] text-white px-2 py-1.5 md:px-4 md:py-2.5 lg:px-5 lg:py-3 rounded font-semibold hover:bg-[#1e3a5f] transition text-xs md:text-sm lg:text-base shadow-sm"
           >
-            View Services
+            View Plans
           </a>
         </div>
       </nav>
@@ -324,13 +324,20 @@ export default function Home() {
             </div>
 
             {/* Phone */}
-            <div className="flex items-center gap-3 md:gap-4 mb-6 md:mb-8">
-              <svg className="w-5 h-5 md:w-7 md:h-7 text-[#2c5887] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-              </svg>
-              <a href="tel:843-855-1300" className="text-[#1e3a5f] text-base md:text-xl font-semibold hover:text-blue-500 transition">
-                (843) 855-1300
-              </a>
+            <div className="flex flex-col gap-2 mb-6 md:mb-8">
+              <div className="flex items-center gap-3 md:gap-4">
+                <svg className="w-5 h-5 md:w-7 md:h-7 text-[#2c5887] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+                <a href="tel:843-831-0033" className="text-[#1e3a5f] text-base md:text-xl font-semibold hover:text-blue-500 transition">
+                  (843) 831-0033 <span className="font-normal text-[#2c5887] text-sm">Office</span>
+                </a>
+              </div>
+              <div className="flex items-center gap-3 md:gap-4 ml-8 md:ml-11">
+                <a href="tel:843-855-1300" className="text-[#1e3a5f] text-base md:text-xl font-semibold hover:text-blue-500 transition">
+                  (843) 855-1300 <span className="font-normal text-[#2c5887] text-sm">Mobile</span>
+                </a>
+              </div>
             </div>
 
             {/* Doctor Info Card - Mobile */}
@@ -663,93 +670,14 @@ export default function Home() {
       </section>
 
       {/* Pricing Section */}
-      <section id="pricing" className="py-10 md:py-16 px-4 bg-white">
+      <section id="pricing" className="py-10 md:py-16 px-4 bg-white scroll-mt-20 md:scroll-mt-28">
         <div className="max-w-6xl mx-auto">
           <p className="text-[#2c5887] text-xl md:text-3xl font-semibold tracking-[0.2em] uppercase mb-4 text-center">Pricing & Plans</p>
           <h2 className="text-[#1a3351] text-2xl md:text-3xl font-bold mb-2 md:mb-8 text-center" style={{ fontFamily: 'var(--font-playfair)' }}>
 Happy{" "}Pricing That Fits Your Budget
           </h2>
-          <div className="grid md:grid-cols-2 gap-6 mb-6">
-            {/* Studio Visits */}
-            <div className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden">
-              <div className="bg-[#1e3a5f] px-5 py-3">
-                <h3 className="text-white font-bold text-lg md:text-xl" style={{ fontFamily: 'var(--font-playfair)' }}>Studio Visits</h3>
-              </div>
-              <div className="p-5 md:p-4 space-y-4 md:space-y-3">
-                <div className="flex items-center justify-between bg-gradient-to-r from-[#e0935a] via-[#e5a578] to-[#e0935a] text-white rounded-xl p-4 md:p-3 shadow-lg">
-                  <div>
-                    <p className="font-bold text-lg">New Patient Special</p>
-                    <p className="text-[#fae9dc] text-sm">Consult, exam & adjustment</p>
-                  </div>
-                  <div className="text-3xl md:text-2xl font-bold bg-gradient-to-r from-yellow-300 via-amber-200 to-yellow-300 bg-clip-text text-transparent drop-shadow-[0_0_10px_rgba(251,191,36,0.9)]">$29</div>
-                </div>
-                <div className="flex items-center justify-between bg-gray-50 rounded-xl p-4 md:p-3 border border-gray-200">
-                  <div>
-                    <p className="text-gray-800 font-semibold">Single Visit</p>
-                    <p className="text-gray-500 text-sm">Pay as you go</p>
-                  </div>
-                  <div className="text-gray-800 text-3xl md:text-2xl font-bold">$40</div>
-                </div>
-                <div className="flex items-center justify-between bg-gray-50 rounded-xl p-4 md:p-3 border border-gray-200">
-                  <div>
-                    <p className="text-gray-800 font-semibold">Pack of 10</p>
-                    <p className="text-gray-500 text-sm">No expiration</p>
-                  </div>
-                  <div className="text-gray-800 text-3xl md:text-2xl font-bold">$300</div>
-                </div>
-              </div>
-            </div>
-
-            {/* Mobile Chiropractic */}
-            <div className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden">
-              <div className="bg-[#1e3a5f] px-5 py-3 flex items-start justify-between">
-                <h3 className="text-white font-bold text-lg md:text-xl leading-tight" style={{ fontFamily: 'var(--font-playfair)' }}>
-                  Concierge Mobile<br />
-                  <span className="text-white">Chiropractic</span>
-                </h3>
-                <span className="bg-gradient-to-r from-amber-400 to-amber-500 text-amber-900 text-xs font-bold px-3 py-1.5 rounded-full shadow mt-1">✦ WE COME TO YOU</span>
-              </div>
-              <div className="p-5 md:p-4">
-                {/* Mobile: stacked text + mascot */}
-                <p className="md:hidden text-gray-700 mb-4">Can't make it to the studio? <span className="font-semibold text-[#1e3a5f]">Dr. Bell comes directly to your home.</span></p>
-                <div className="md:hidden flex justify-center mb-4">
-                  <img src="/images/mascot-driving-v2.png" alt="Dr. Bell driving to you" className="w-48 h-auto" />
-                </div>
-                
-                {/* Desktop: text left, mascot right */}
-                <div className="hidden md:flex items-center gap-6 mb-4">
-                  <div className="flex-1">
-                    <p className="text-gray-700 text-xl mb-1">Can't make it to the studio?</p>
-                    <p className="font-bold text-[#1e3a5f] text-xl">Dr. Bell comes directly to your home.</p>
-                  </div>
-                  <img src="/images/mascot-driving-v2.png" alt="Dr. Bell driving to you" className="w-44 h-auto flex-shrink-0" />
-                </div>
-                <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-4 md:p-3 text-center border border-blue-200 mb-4 md:mb-3">
-                  <div className="text-[#1a3351] text-4xl md:text-3xl font-bold">$40 <span className="text-2xl md:text-xl font-normal md:font-semibold text-[#2c5887]">+ travel fee</span></div>
-                </div>
-                <div className="bg-gray-50 rounded-xl p-4 md:p-3 border border-gray-200 mb-4 md:mb-3">
-                  <div className="flex items-center gap-2 mb-3 md:mb-2">
-                    <span className="text-xl">📅</span>
-                    <p className="text-gray-800 font-semibold">Available</p>
-                  </div>
-                  <div className="flex justify-center gap-4">
-                    <div className="bg-white px-5 md:px-6 py-3 md:py-2 rounded-xl font-bold text-sm shadow-md border-2 border-blue-400">
-                      <p className="text-blue-400 text-sm uppercase tracking-wider mb-0.5">Every</p>
-                      <p className="text-[#2c5887]">Tuesday</p>
-                    </div>
-                    <div className="bg-white px-5 md:px-6 py-3 md:py-2 rounded-xl font-bold text-sm shadow-md border-2 border-blue-400">
-                      <p className="text-blue-400 text-sm uppercase tracking-wider mb-0.5">Every</p>
-                      <p className="text-[#2c5887]">Thursday</p>
-                    </div>
-                  </div>
-                </div>
-                <p className="text-gray-600 text-sm text-center">Ideal for seniors, busy professionals, or anyone who prefers care at home.</p>
-              </div>
-            </div>
-          </div>
-
           {/* Wellness Plans */}
-          <div className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden">
+          <div className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden mb-6 mt-4 md:mt-0">
             <div className="bg-[#1e3a5f] px-5 py-3">
               <h3 className="text-white font-bold text-lg md:text-xl" style={{ fontFamily: 'var(--font-playfair)' }}>Wellness Plans</h3>
             </div>
@@ -794,10 +722,10 @@ Happy{" "}Pricing That Fits Your Budget
                   {/* Adult */}
                   <div className="bg-white rounded-xl p-5 md:p-4 flex items-center justify-between border-2 border-blue-400 shadow-sm">
                     <div>
-                      <p className="text-[#1a3351] font-bold text-lg md:text-base mb-1">Adult Wellness</p>
-                      <ul className="list-disc list-inside marker:text-blue-500 space-y-0.5">
-                        <li className="text-[#2c5887] text-base md:text-sm font-medium">Health insurance not accepted</li>
-                        <li className="text-[#2c5887] text-base md:text-sm font-medium">HSA & FSA approved</li>
+                      <p className="text-[#1a3351] font-bold text-base md:text-base mb-1">Adult Wellness</p>
+                      <ul className="list-disc list-outside marker:text-blue-500 space-y-0.5 ml-4">
+                        <li className="text-[#2c5887] text-xs md:text-sm font-medium">Health insurance not accepted</li>
+                        <li className="text-[#2c5887] text-xs md:text-sm font-medium">HSA & FSA approved</li>
                       </ul>
                     </div>
                     <p className="text-[#1e3a5f] text-3xl md:text-2xl font-bold">$70<span className="text-lg md:text-base font-semibold text-gray-500">/mo</span></p>
@@ -805,11 +733,11 @@ Happy{" "}Pricing That Fits Your Budget
                   {/* Public Service */}
                   <div className="bg-white rounded-xl p-5 md:p-4 flex items-center justify-between border-2 border-blue-400 shadow-sm">
                     <div>
-                      <p className="text-[#1a3351] font-bold text-lg md:text-base mb-1">Public Service Wellness</p>
-                      <ul className="list-disc list-inside marker:text-blue-500 space-y-0.5">
-                        <li className="text-[#2c5887] text-base md:text-sm font-medium">Military</li>
-                        <li className="text-[#2c5887] text-base md:text-sm font-medium">First Responders</li>
-                        <li className="text-[#2c5887] text-base md:text-sm font-medium">Educators</li>
+                      <p className="text-[#1a3351] font-bold text-base md:text-base mb-1">Public Service Wellness</p>
+                      <ul className="list-disc list-outside marker:text-blue-500 space-y-0.5 ml-4">
+                        <li className="text-[#2c5887] text-xs md:text-sm font-medium">Military</li>
+                        <li className="text-[#2c5887] text-xs md:text-sm font-medium">First Responders</li>
+                        <li className="text-[#2c5887] text-xs md:text-sm font-medium">Educators</li>
                       </ul>
                     </div>
                     <p className="text-[#1e3a5f] text-3xl md:text-2xl font-bold">$60<span className="text-lg md:text-base font-semibold text-gray-500">/mo</span></p>
@@ -817,14 +745,93 @@ Happy{" "}Pricing That Fits Your Budget
                   {/* Youth */}
                   <div className="bg-white rounded-xl p-5 md:p-4 flex items-center justify-between border-2 border-blue-400 shadow-sm">
                     <div>
-                      <p className="text-[#1a3351] font-bold text-lg md:text-base mb-1">Youth Wellness</p>
-                      <ul className="list-disc list-inside marker:text-blue-500">
-                        <li className="text-[#2c5887] text-base md:text-sm font-medium">Ages 17 & under</li>
+                      <p className="text-[#1a3351] font-bold text-base md:text-base mb-1">Youth Wellness</p>
+                      <ul className="list-disc list-outside marker:text-blue-500 ml-4">
+                        <li className="text-[#2c5887] text-xs md:text-sm font-medium">Ages 17 & under</li>
                       </ul>
                     </div>
                     <p className="text-[#1e3a5f] text-3xl md:text-2xl font-bold">$45<span className="text-lg md:text-base font-semibold text-gray-500">/mo</span></p>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            {/* Studio Visits */}
+            <div className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden">
+              <div className="bg-[#1e3a5f] px-5 py-3">
+                <h3 className="text-white font-bold text-lg md:text-xl" style={{ fontFamily: 'var(--font-playfair)' }}>Studio Visits</h3>
+              </div>
+              <div className="p-5 md:p-4 space-y-4 md:space-y-3">
+                <div className="flex items-center justify-between bg-gradient-to-r from-[#e0935a] via-[#e5a578] to-[#e0935a] text-white rounded-xl p-4 md:p-3 shadow-lg">
+                  <div>
+                    <p className="font-bold text-lg">New Patient Special</p>
+                    <p className="text-[#fae9dc] text-sm">Consult, exam & adjustment</p>
+                  </div>
+                  <div className="text-3xl md:text-2xl font-bold bg-gradient-to-r from-yellow-300 via-amber-200 to-yellow-300 bg-clip-text text-transparent drop-shadow-[0_0_10px_rgba(251,191,36,0.9)]">$29</div>
+                </div>
+                <div className="flex items-center justify-between bg-gray-50 rounded-xl p-4 md:p-3 border border-gray-200">
+                  <div>
+                    <p className="text-gray-800 font-semibold">Single Visit</p>
+                    <p className="text-gray-500 text-sm">Pay as you go</p>
+                  </div>
+                  <div className="text-gray-800 text-3xl md:text-2xl font-bold">$40</div>
+                </div>
+                <div className="flex items-center justify-between bg-gray-50 rounded-xl p-4 md:p-3 border border-gray-200">
+                  <div>
+                    <p className="text-gray-800 font-semibold">Pack of 10</p>
+                    <p className="text-gray-500 text-sm">No expiration</p>
+                  </div>
+                  <div className="text-gray-800 text-3xl md:text-2xl font-bold">$300</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Mobile Chiropractic */}
+            <div className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden">
+              <div className="bg-[#1e3a5f] px-5 py-3 flex items-start justify-between">
+                <h3 className="text-white font-bold text-lg md:text-xl leading-tight" style={{ fontFamily: 'var(--font-playfair)' }}>
+                  Concierge Mobile<br />
+                  <span className="text-white">Chiropractic</span>
+                </h3>
+                <span className="bg-gradient-to-r from-amber-400 to-amber-500 text-amber-900 text-xs font-bold px-3 py-1.5 rounded-full shadow mt-1">✦ WE COME TO YOU</span>
+              </div>
+              <div className="p-5 md:p-4">
+                {/* Mobile: stacked text + mascot */}
+                <p className="lg:hidden text-gray-700 mb-4">Can't make it to the studio? <span className="font-semibold text-[#1e3a5f]">Dr. Bell comes directly to your home.</span></p>
+                <div className="lg:hidden flex justify-center mb-4">
+                  <img src="/images/mascot-driving-v2.png" alt="Dr. Bell driving to you" className="w-48 h-auto" />
+                </div>
+                
+                {/* Desktop: text left, mascot right */}
+                <div className="hidden lg:flex items-center gap-6 mb-4">
+                  <div className="flex-1">
+                    <p className="text-gray-700 text-xl mb-1">Can't make it to the studio?</p>
+                    <p className="font-bold text-[#1e3a5f] text-xl">Dr. Bell comes directly to your home.</p>
+                  </div>
+                  <img src="/images/mascot-driving-v2.png" alt="Dr. Bell driving to you" className="w-44 h-auto flex-shrink-0" />
+                </div>
+                <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-4 md:p-3 text-center border border-blue-200 mb-4 md:mb-3">
+                  <div className="text-[#1a3351] text-4xl md:text-3xl font-bold">$40 <span className="text-2xl md:text-xl font-normal md:font-semibold text-[#2c5887]">+ travel fee</span></div>
+                </div>
+                <div className="bg-gray-50 rounded-xl p-4 md:p-3 border border-gray-200 mb-4 md:mb-3">
+                  <div className="flex items-center gap-2 mb-3 md:mb-2">
+                    <span className="text-xl">📅</span>
+                    <p className="text-gray-800 font-semibold">Available</p>
+                  </div>
+                  <div className="flex justify-center gap-4">
+                    <div className="bg-white px-5 md:px-6 py-3 md:py-2 rounded-xl font-bold text-sm shadow-md border-2 border-blue-400">
+                      <p className="text-blue-400 text-sm uppercase tracking-wider mb-0.5">Every</p>
+                      <p className="text-[#2c5887]">Tuesday</p>
+                    </div>
+                    <div className="bg-white px-5 md:px-6 py-3 md:py-2 rounded-xl font-bold text-sm shadow-md border-2 border-blue-400">
+                      <p className="text-blue-400 text-sm uppercase tracking-wider mb-0.5">Every</p>
+                      <p className="text-[#2c5887]">Thursday</p>
+                    </div>
+                  </div>
+                </div>
+                <p className="text-gray-600 text-sm text-center">Ideal for seniors, busy professionals, or anyone who prefers care at home.</p>
               </div>
             </div>
           </div>
@@ -885,13 +892,13 @@ Happy{" "}Pricing That Fits Your Budget
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
-              href="tel:843-855-1300"
+              href="tel:843-831-0033"
               className="bg-white/20 text-white border-2 border-white px-6 md:px-8 py-3 md:py-4 rounded-xl font-semibold hover:bg-white/30 transition flex items-center gap-3 md:text-lg cursor-pointer"
             >
               <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
               </svg>
-              <span>(843) 855-1300</span>
+              <span>(843) 831-0033</span>
             </a>
             <a
               href="mailto:contact@happyspine.com"
@@ -909,8 +916,8 @@ Happy{" "}Pricing That Fits Your Budget
       {/* Footer */}
       <footer className="bg-gray-100 py-12 px-4 border-t border-gray-200">
         <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-4 gap-8 mb-8 items-start">
-            <div className="md:col-span-2 md:-mt-8">
+          <div className="grid lg:grid-cols-4 gap-8 mb-8 items-start">
+            <div className="lg:col-span-2 lg:-mt-8">
               <div className="mb-4">
                 <img src="/images/logo-full.png" alt="The Happy Spine Studio" className="h-24 md:h-32 w-auto" />
               </div>
@@ -922,10 +929,15 @@ Happy{" "}Pricing That Fits Your Budget
                 Walk-ins welcome. No appointments necessary.
               </p>
             </div>
-            <div>
+            <div className="min-w-0">
               <h4 className="text-[#2c5887] font-semibold mb-4">Contact</h4>
               <p className="text-gray-700">
-                (843) 855-1300<br />
+                <span className="text-gray-500 text-sm">Office:</span> (843) 831-0033
+              </p>
+              <p className="text-gray-700">
+                <span className="text-gray-500 text-sm">Mobile:</span> (843) 855-1300
+              </p>
+              <p className="text-gray-700 break-all">
                 contact@happyspine.com
               </p>
             </div>

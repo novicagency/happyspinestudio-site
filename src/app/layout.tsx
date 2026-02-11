@@ -20,7 +20,7 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: "Happy Spine Studio | Chiropractor in Myrtle Beach, SC",
-  description: "Personalized chiropractic care in Myrtle Beach. New patients just $29. Walk-ins welcome. Call (843) 855-1300 to book your appointment.",
+  description: "Personalized chiropractic care in Myrtle Beach. New patients just $29. Walk-ins welcome. Call (843) 831-0033 to book your appointment.",
   keywords: "chiropractor, Myrtle Beach, chiropractic, back pain, neck pain, spinal adjustment, SC",
 };
 
