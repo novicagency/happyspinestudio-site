@@ -487,12 +487,9 @@ export default function Home() {
           </div>
         </div>
         <div className="bg-[#c46d2a] py-3 text-center">
-          <a href="/new-patient" className="inline-flex items-center gap-2 bg-white text-[#db813c] px-6 py-2 rounded-full font-semibold text-sm hover:bg-[#fdf4ee] transition shadow-md">
-            Claim Your $29 Visit
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-            </svg>
-          </a>
+          <span className="inline-flex items-center gap-2 bg-white text-[#db813c] px-6 py-2 rounded-full font-semibold text-sm shadow-md">
+            ✓ Walk-ins Welcome — No Appointment Needed
+          </span>
         </div>
       </section>
 
