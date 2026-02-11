@@ -487,7 +487,7 @@ export default function Home() {
           </div>
         </div>
         <div className="bg-[#c46d2a] py-3 text-center">
-          <span className="inline-flex items-center gap-2 bg-white text-[#db813c] px-6 py-2 rounded-full font-semibold text-sm shadow-md">
+          <span className="text-white font-semibold text-sm">
             ✓ Walk-ins Welcome — No Appointment Needed
           </span>
         </div>
