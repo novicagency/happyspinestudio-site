@@ -132,7 +132,7 @@ function getStoreStatus() {
   if (todaySchedule.mobile) {
     // Mobile day - studio closed
     const next = getNextOpen();
-    return { isOpen: false, isMobile: true, message: `Mobile Day · Studio opens ${formatTime(next.time)} ${dayNames[next.day]}` };
+    return { isOpen: false, isMobile: true, message: `Mobile Day`, studioOpens: `Studio opens ${formatTime(next.time)} ${dayNames[next.day]}` };
   }
 
   if (currentTime < todaySchedule.open) {
@@ -239,11 +239,11 @@ export default function Home() {
             </button>
             {/* Logo - Mobile/Tablet */}
             <a href="#" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
-              <img src="/images/logo-full.png" alt="The Happy Spine Studio" className="lg:hidden h-14 min-[360px]:h-20 md:h-28 w-auto -my-2 min-[360px]:-my-4 md:-my-6" />
+              <img src="/images/logo-full.png" alt="The Happy Spine Studio" className="lg:hidden h-16 min-[360px]:h-24 md:h-32 w-auto -my-3 min-[360px]:-my-5 md:-my-8" />
             </a>
             {/* Logo - Desktop */}
             <a href="#" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
-              <img src="/images/logo-full.png" alt="The Happy Spine Studio" className="hidden lg:block h-32 w-auto -my-6" />
+              <img src="/images/logo-full.png" alt="The Happy Spine Studio" className="hidden lg:block h-40 w-auto -my-8" />
             </a>
           </div>
           
@@ -267,12 +267,11 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-24 md:pt-36 pb-4 md:pb-10 px-4 bg-white">
+      <section className="pt-28 md:pt-40 pb-12 md:pb-16 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="md:grid md:grid-cols-2 md:gap-12 md:items-start">
             {/* Left Column */}
             <div>
-            <p className="text-[#2c5887] text-sm md:text-xl font-semibold md:font-bold tracking-[0.2em] uppercase mb-2 md:mb-4 flex items-center gap-3 md:gap-4">The Happy Spine Studio <img src="/images/spine.png" alt="" className="w-6 h-6 md:w-11 md:h-11 object-contain" style={{ filter: 'invert(27%) sepia(45%) saturate(700%) hue-rotate(180deg) brightness(90%) contrast(90%)' }} /></p>
             <h1 className="text-[#1e3a5f] text-4xl md:text-6xl font-bold mb-2 md:mb-4 tracking-tight" style={{ fontFamily: 'var(--font-poppins)' }}>Myrtle Beach</h1>
             <p className="text-[#2c5887]/70 text-base md:text-2xl mb-3 md:mb-6 italic tracking-wide">"Make Your Spine Happy."</p>
             <div className="inline-block bg-blue-50 border border-blue-200 rounded-lg md:rounded-xl px-4 md:px-6 py-2 md:py-4">
@@ -306,6 +305,8 @@ export default function Home() {
                   <p className="text-[#1e3a5f] text-base md:text-xl">
                     {storeStatus.isOpen ? (
                       <><span className="text-emerald-500 font-semibold">Open</span> · {storeStatus.message}</>
+                    ) : storeStatus.isMobile ? (
+                      <><span className="text-red-500 font-semibold">Closed</span> · {storeStatus.message}<br className="md:hidden" /><span className="hidden md:inline"> · </span>{storeStatus.studioOpens}</>
                     ) : (
                       <><span className="text-red-500 font-semibold">Closed</span> · {storeStatus.message}</>
                     )}
@@ -439,7 +440,7 @@ export default function Home() {
       </section>
 
       {/* New Patient Special Banner - Ticker */}
-      <section className="bg-[#db813c] overflow-hidden md:-mt-3">
+      <section className="bg-[#db813c] overflow-hidden">
         <div className="py-2 flex">
           <div className="animate-marquee whitespace-nowrap flex items-center gap-16 pr-16">
             <span className="flex items-center gap-3 text-white">
@@ -494,7 +495,7 @@ export default function Home() {
       </section>
 
       {/* Video Carousel */}
-      <section className="bg-gray-50 py-12 md:py-10 px-4">
+      <section className="bg-gray-50 py-12 md:py-16 px-4">
         <div className="max-w-3xl mx-auto">
           <p className="text-[#2c5887] text-2xl md:text-3xl font-semibold tracking-[0.2em] uppercase mb-6 text-center">Showcase</p>
           {/* Video Container */}
@@ -541,7 +542,7 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section className="py-16 px-4 bg-white">
+      <section className="py-12 md:py-16 px-4 bg-white">
         <div className="max-w-5xl mx-auto">
           <div className="grid md:grid-cols-2 gap-10 items-center">
             {/* Description */}
@@ -579,7 +580,7 @@ export default function Home() {
       </section>
 
       {/* Reviews Section */}
-      <section id="testimonials" className="py-10 md:py-16 px-4 bg-blue-50 scroll-mt-20">
+      <section id="testimonials" className="py-12 md:py-16 px-4 bg-blue-50 scroll-mt-20">
         <div className="max-w-4xl lg:max-w-5xl mx-auto">
           <p className="text-[#2c5887] text-xl md:text-3xl font-semibold tracking-[0.2em] uppercase mb-2 text-center">Testimonials</p>
           <h2 className="text-[#1a3351] text-2xl md:text-3xl font-bold mb-6 text-center" style={{ fontFamily: 'var(--font-playfair)' }}>See What People Say About Us</h2>
@@ -589,31 +590,31 @@ export default function Home() {
             {/* Fanned Review Cards */}
             <div className="relative flex justify-center" style={{ perspective: '1000px' }}>
               {/* Card 1 - Left */}
-              <div className="absolute bg-white rounded-xl shadow-lg p-5 w-52 h-64 border-2 border-blue-200 top-0" style={{ transform: 'rotate(-15deg) translateX(-95px)', transformOrigin: 'top center' }}>
-                <div className="text-amber-400 text-base mb-2">★★★★★</div>
-                <p className="text-[#1e3a5f] text-sm leading-snug italic line-clamp-5">"{testimonials[2].text}"</p>
-                <p className="text-[#1a3351] font-semibold text-sm mt-3">{testimonials[2].name}</p>
+              <div className="absolute bg-white rounded-xl shadow-lg p-4 w-44 h-60 border-2 border-blue-200 top-0" style={{ transform: 'rotate(-15deg) translateX(-75px)', transformOrigin: 'top center' }}>
+                <div className="text-amber-400 text-sm mb-2">★★★★★</div>
+                <p className="text-[#1e3a5f] text-xs leading-snug italic line-clamp-5">"{testimonials[2].text}"</p>
+                <p className="text-[#1a3351] font-semibold text-xs mt-2">{testimonials[2].name}</p>
               </div>
               
               {/* Card 2 - Center Left */}
-              <div className="absolute bg-white rounded-xl shadow-lg p-5 w-52 h-64 border-2 border-blue-200 top-0" style={{ transform: 'rotate(-5deg) translateX(-30px)', transformOrigin: 'top center', zIndex: 1 }}>
-                <div className="text-amber-400 text-base mb-2">★★★★★</div>
-                <p className="text-[#1e3a5f] text-sm leading-snug italic line-clamp-5">"{testimonials[3].text}"</p>
-                <p className="text-[#1a3351] font-semibold text-sm mt-3">{testimonials[3].name}</p>
+              <div className="absolute bg-white rounded-xl shadow-lg p-4 w-44 h-60 border-2 border-blue-200 top-0" style={{ transform: 'rotate(-5deg) translateX(-25px)', transformOrigin: 'top center', zIndex: 1 }}>
+                <div className="text-amber-400 text-sm mb-2">★★★★★</div>
+                <p className="text-[#1e3a5f] text-xs leading-snug italic line-clamp-5">"{testimonials[3].text}"</p>
+                <p className="text-[#1a3351] font-semibold text-xs mt-2">{testimonials[3].name}</p>
               </div>
               
               {/* Card 3 - Center (Featured) */}
-              <div className="absolute bg-white rounded-xl shadow-xl p-5 w-56 h-68 border-2 border-blue-400 top-0" style={{ transform: 'rotate(0deg)', transformOrigin: 'top center', zIndex: 2 }}>
-                <div className="text-amber-400 text-base mb-2">★★★★★</div>
-                <p className="text-[#1e3a5f] text-sm leading-snug italic line-clamp-6">"{testimonials[1].text}"</p>
-                <p className="text-[#1a3351] font-semibold text-sm mt-3">{testimonials[1].name}</p>
+              <div className="absolute bg-white rounded-xl shadow-xl p-4 w-48 h-64 border-2 border-blue-400 top-0" style={{ transform: 'rotate(0deg)', transformOrigin: 'top center', zIndex: 2 }}>
+                <div className="text-amber-400 text-sm mb-2">★★★★★</div>
+                <p className="text-[#1e3a5f] text-xs leading-snug italic line-clamp-6">"{testimonials[1].text}"</p>
+                <p className="text-[#1a3351] font-semibold text-xs mt-2">{testimonials[1].name}</p>
               </div>
               
               {/* Card 4 - Right */}
-              <div className="absolute bg-white rounded-xl shadow-lg p-5 w-52 h-64 border-2 border-blue-200 top-0" style={{ transform: 'rotate(5deg) translateX(30px)', transformOrigin: 'top center', zIndex: 1 }}>
-                <div className="text-amber-400 text-base mb-2">★★★★★</div>
-                <p className="text-[#1e3a5f] text-sm leading-snug italic line-clamp-5">"{testimonials[0].text}"</p>
-                <p className="text-[#1a3351] font-semibold text-sm mt-3">{testimonials[0].name}</p>
+              <div className="absolute bg-white rounded-xl shadow-lg p-4 w-44 h-60 border-2 border-blue-200 top-0" style={{ transform: 'rotate(5deg) translateX(25px)', transformOrigin: 'top center', zIndex: 1 }}>
+                <div className="text-amber-400 text-sm mb-2">★★★★★</div>
+                <p className="text-[#1e3a5f] text-xs leading-snug italic line-clamp-5">"{testimonials[0].text}"</p>
+                <p className="text-[#1a3351] font-semibold text-xs mt-2">{testimonials[0].name}</p>
               </div>
             </div>
           </div>
@@ -667,7 +668,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="text-center mt-8">
+          <div className="text-center mt-4">
             <a href="/reviews" className="inline-flex items-center gap-2 md:gap-3 text-[#2c5887] font-semibold hover:text-[#1e3a5f] transition text-lg md:text-xl tracking-[0.1em] uppercase cursor-pointer">
               View All Reviews
               <svg className="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
@@ -679,27 +680,42 @@ export default function Home() {
       </section>
 
       {/* Pricing Section */}
-      <section id="pricing" className="py-10 md:py-16 px-4 bg-white scroll-mt-20 md:scroll-mt-28">
+      <section id="pricing" className="py-12 md:py-16 px-4 bg-white scroll-mt-20 md:scroll-mt-28">
         <div className="max-w-6xl mx-auto">
           <p className="text-[#2c5887] text-xl md:text-3xl font-semibold tracking-[0.2em] uppercase mb-4 text-center">Pricing & Plans</p>
-          <h2 className="text-[#1a3351] text-2xl md:text-3xl font-bold mb-2 md:mb-8 text-center" style={{ fontFamily: 'var(--font-playfair)' }}>
-Happy{" "}Pricing That Fits Your Budget
+          <h2 className="text-[#1a3351] text-[1.05rem] min-[375px]:text-[1.3rem] min-[390px]:text-[1.42rem] md:text-3xl font-bold mb-2 md:mb-8 text-center whitespace-nowrap" style={{ fontFamily: 'var(--font-playfair)' }}>
+Happy Pricing That Fits Your Budget
           </h2>
           {/* Wellness Plans */}
-          <div className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden mb-6 mt-4 md:mt-0">
-            <div className="bg-[#1e3a5f] px-5 py-3">
-              <h3 className="text-white font-bold text-lg md:text-xl" style={{ fontFamily: 'var(--font-playfair)' }}>Wellness Plans</h3>
+          <div className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden mb-6 mt-6 md:mt-0">
+            <div className="bg-[#1e3a5f] px-5 py-4">
+              <h3 className="text-white font-bold text-xl md:text-2xl">Wellness Plans</h3>
             </div>
             <div className="p-5 md:p-4">
               <div className="grid md:grid-cols-2 gap-6 md:gap-4">
                 {/* Left - Bullet Points */}
                 {/* Mobile */}
-                <ul className="md:hidden space-y-3 list-disc list-inside marker:text-blue-500">
-                  <li className="text-gray-700">Wellness Plans offer up to <span className="font-semibold">4 visits per month</span></li>
-                  <li className="text-gray-700">Extra visits <span className="font-semibold">$10 each</span></li>
-                  <li className="text-gray-700">Month-to-month flexibility</li>
-                  <li className="text-gray-700">No long-term contracts</li>
-                </ul>
+                <div className="md:hidden space-y-3">
+                  <div className="flex items-start gap-2">
+                    <span className="text-blue-500 mt-1">•</span>
+                    <div className="text-gray-700">
+                      <span>Wellness Plans offer up to</span><br />
+                      <span className="font-semibold">4 visits per month</span>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <span className="text-blue-500 mt-1">•</span>
+                    <span className="text-gray-700">Extra visits <span className="font-semibold">$10 each</span></span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <span className="text-blue-500 mt-1">•</span>
+                    <span className="text-gray-700">Month-to-month flexibility</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <span className="text-blue-500 mt-1">•</span>
+                    <span className="text-gray-700">No long-term contracts</span>
+                  </div>
+                </div>
                 {/* Desktop */}
                 <div className="hidden md:flex flex-col">
                   {/* Bullet 1: 4 visits per month */}
@@ -733,7 +749,7 @@ Happy{" "}Pricing That Fits Your Budget
                     <div>
                       <p className="text-[#1a3351] font-bold text-base md:text-base mb-1">Adult Wellness</p>
                       <ul className="list-disc list-outside marker:text-blue-500 space-y-0.5 ml-4">
-                        <li className="text-[#2c5887] text-xs md:text-sm font-medium">Health insurance not accepted</li>
+                        <li className="text-[#2c5887] text-xs md:text-sm font-medium">Health insurance<br className="md:hidden" /> not accepted</li>
                         <li className="text-[#2c5887] text-xs md:text-sm font-medium">HSA & FSA approved</li>
                       </ul>
                     </div>
@@ -745,7 +761,7 @@ Happy{" "}Pricing That Fits Your Budget
                       <p className="text-[#1a3351] font-bold text-base md:text-base mb-1">Public Service Wellness</p>
                       <ul className="list-disc list-outside marker:text-blue-500 space-y-0.5 ml-4">
                         <li className="text-[#2c5887] text-xs md:text-sm font-medium">Military</li>
-                        <li className="text-[#2c5887] text-xs md:text-sm font-medium">First Responders</li>
+                        <li className="text-[#2c5887] text-xs md:text-sm font-medium whitespace-nowrap">First Responders</li>
                         <li className="text-[#2c5887] text-xs md:text-sm font-medium">Educators</li>
                       </ul>
                     </div>
@@ -756,7 +772,7 @@ Happy{" "}Pricing That Fits Your Budget
                     <div>
                       <p className="text-[#1a3351] font-bold text-base md:text-base mb-1">Youth Wellness</p>
                       <ul className="list-disc list-outside marker:text-blue-500 ml-4">
-                        <li className="text-[#2c5887] text-xs md:text-sm font-medium">Ages 17 & under</li>
+                        <li className="text-[#2c5887] text-xs md:text-sm font-medium whitespace-nowrap">Ages 17 & under</li>
                       </ul>
                     </div>
                     <p className="text-[#1e3a5f] text-3xl md:text-2xl font-bold">$45<span className="text-lg md:text-base font-semibold text-gray-500">/mo</span></p>
@@ -769,8 +785,8 @@ Happy{" "}Pricing That Fits Your Budget
           <div className="grid md:grid-cols-2 gap-6">
             {/* Studio Visits */}
             <div className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden">
-              <div className="bg-[#1e3a5f] px-5 py-3">
-                <h3 className="text-white font-bold text-lg md:text-xl" style={{ fontFamily: 'var(--font-playfair)' }}>Studio Visits</h3>
+              <div className="bg-[#1e3a5f] px-5 py-4">
+                <h3 className="text-white font-bold text-xl md:text-2xl">Studio Visits</h3>
               </div>
               <div className="p-5 md:p-4 space-y-4 md:space-y-3">
                 <div className="flex items-center justify-between bg-gradient-to-r from-[#e0935a] via-[#e5a578] to-[#e0935a] text-white rounded-xl p-4 md:p-3 shadow-lg">
@@ -799,8 +815,8 @@ Happy{" "}Pricing That Fits Your Budget
 
             {/* Mobile Chiropractic */}
             <div className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden">
-              <div className="bg-[#1e3a5f] px-5 py-3 flex items-start justify-between">
-                <h3 className="text-white font-bold text-lg md:text-xl leading-tight" style={{ fontFamily: 'var(--font-playfair)' }}>
+              <div className="bg-[#1e3a5f] px-5 py-4 flex items-start justify-between">
+                <h3 className="text-white font-bold text-xl md:text-2xl leading-tight">
                   Concierge Mobile<br />
                   <span className="text-white">Chiropractic</span>
                 </h3>
@@ -808,7 +824,7 @@ Happy{" "}Pricing That Fits Your Budget
               </div>
               <div className="p-5 md:p-4">
                 {/* Mobile: stacked text + mascot */}
-                <p className="lg:hidden text-gray-700 mb-4">Can't make it to the studio? <span className="font-semibold text-[#1e3a5f]">Dr. Bell comes directly to your home.</span></p>
+                <p className="lg:hidden text-gray-700 mb-4">Can't make it to the studio?<br /><span className="font-semibold text-[#1e3a5f] whitespace-nowrap">Dr. Bell comes directly to your home.</span></p>
                 <div className="lg:hidden flex justify-center mb-4">
                   <img src="/images/mascot-driving-v2.png" alt="Dr. Bell driving to you" className="w-48 h-auto" />
                 </div>
@@ -851,7 +867,7 @@ Happy{" "}Pricing That Fits Your Budget
       <div className="border-t border-gray-200 mx-4"></div>
 
       {/* Hours & Location Section */}
-      <section id="hours" className="py-10 md:py-16 px-4 scroll-mt-20">
+      <section id="hours" className="py-12 md:py-16 px-4 scroll-mt-20">
         <div className="max-w-4xl mx-auto">
           <div className="grid md:grid-cols-2 gap-8 md:gap-12">
             {/* Studio Hours */}
@@ -891,7 +907,7 @@ Happy{" "}Pricing That Fits Your Budget
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-10 md:py-16 px-4 bg-gradient-to-br from-cyan-500 to-[#2c5887] scroll-mt-20">
+      <section id="contact" className="py-12 md:py-16 px-4 bg-gradient-to-br from-cyan-500 to-[#2c5887] scroll-mt-20">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-2xl md:text-4xl font-bold text-white mb-4 md:mb-6">
             Ready to Make Your Spine Happy?
@@ -978,7 +994,7 @@ Happy{" "}Pricing That Fits Your Budget
           </div>
           <div className="border-t border-gray-300 pt-8">
             <p className="text-gray-500 text-sm text-center">
-              © 2026 The Happy Spine Studio. All rights reserved.
+              © 2026 The Happy Spine Studio.<br className="min-[375px]:hidden" /> All rights reserved.
             </p>
             <div className="flex items-center justify-center gap-3 mt-6 text-gray-500">
               <span className="text-sm font-medium">Powered by</span>
