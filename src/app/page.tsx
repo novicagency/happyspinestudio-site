@@ -548,7 +548,7 @@ export default function Home() {
             {/* Description */}
             <div>
               <p className="text-[#2c5887] text-base md:text-2xl font-semibold tracking-[0.2em] uppercase mb-2">About The Clinic</p>
-              <h2 className="text-[#1a3351] text-2xl md:text-3xl font-bold mb-4" style={{ fontFamily: 'var(--font-playfair)' }}>Your Neighborhood Chiropractor in Myrtle Beach</h2>
+              <h2 className="text-[#1a3351] text-2xl min-[320px]:text-[1.2rem] min-[321px]:text-2xl min-[344px]:text-[1.4rem] min-[345px]:text-2xl min-[360px]:text-xl min-[361px]:text-2xl md:text-3xl font-bold mb-4" style={{ fontFamily: 'var(--font-plus-jakarta)' }}>Your Neighborhood Chiropractor in Myrtle Beach</h2>
               <div className="space-y-4 text-[#1e3a5f] leading-relaxed">
                 <p>
                   At The Happy Spine Studio, we offer personalized chiropractic care that supports your lifestyle and health goals. Whether you're managing chronic pain, recovering from an injury, or looking to improve your overall wellness, Dr. Jason Bell provides treatment plans tailored to your needs.
@@ -583,7 +583,7 @@ export default function Home() {
       <section id="testimonials" className="py-12 md:py-16 px-4 bg-blue-50 scroll-mt-20">
         <div className="max-w-4xl lg:max-w-5xl mx-auto">
           <p className="text-[#2c5887] text-xl md:text-3xl font-semibold tracking-[0.2em] uppercase mb-2 text-center">Testimonials</p>
-          <h2 className="text-[#1a3351] text-2xl md:text-3xl font-bold mb-6 text-center" style={{ fontFamily: 'var(--font-playfair)' }}>See What People Say About Us</h2>
+          <h2 className="text-[#1a3351] text-2xl min-[344px]:text-lg min-[345px]:text-2xl min-[353px]:text-lg min-[354px]:text-2xl min-[360px]:text-lg min-[361px]:text-2xl md:text-3xl font-bold mb-6 text-center" style={{ fontFamily: 'var(--font-plus-jakarta)' }}>See What People Say About Us</h2>
           
           {/* Mobile: Fanned Cards */}
           <div className="md:hidden relative flex justify-center items-start h-[320px] mb-4 mt-8">
@@ -683,7 +683,7 @@ export default function Home() {
       <section id="pricing" className="py-12 md:py-16 px-4 bg-white scroll-mt-20 md:scroll-mt-28">
         <div className="max-w-6xl mx-auto">
           <p className="text-[#2c5887] text-xl md:text-3xl font-semibold tracking-[0.2em] uppercase mb-4 text-center">Pricing & Plans</p>
-          <h2 className="text-[#1a3351] text-[1.05rem] min-[375px]:text-[1.3rem] min-[390px]:text-[1.42rem] md:text-3xl font-bold mb-2 md:mb-8 text-center whitespace-nowrap" style={{ fontFamily: 'var(--font-playfair)' }}>
+          <h2 className="text-[#1a3351] text-[1.05rem] min-[320px]:text-[1.15rem] min-[321px]:text-[1.05rem] min-[344px]:text-[1.15rem] min-[345px]:text-[1.05rem] min-[353px]:text-[1.15rem] min-[354px]:text-[1.05rem] min-[360px]:text-[1.20rem] min-[361px]:text-[1.05rem] min-[375px]:text-[1.3rem] min-[390px]:text-[1.42rem] md:text-3xl font-bold mb-2 md:mb-8 text-center whitespace-nowrap" style={{ fontFamily: 'var(--font-plus-jakarta)' }}>
 Happy Pricing That Fits Your Budget
           </h2>
           {/* Wellness Plans */}
@@ -815,12 +815,11 @@ Happy Pricing That Fits Your Budget
 
             {/* Mobile Chiropractic */}
             <div className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden">
-              <div className="bg-[#1e3a5f] px-5 py-4 flex items-start justify-between">
-                <h3 className="text-white font-bold text-xl md:text-2xl leading-tight">
+              <div className="bg-[#1e3a5f] px-5 py-4">
+                <h3 className="text-white font-bold text-xl [@media(max-width:320px)]:text-base md:text-2xl leading-tight">
                   Concierge Mobile<br />
                   <span className="text-white">Chiropractic</span>
                 </h3>
-                <span className="bg-gradient-to-r from-amber-400 to-amber-500 text-amber-900 text-xs font-bold px-3 py-1.5 rounded-full shadow mt-1">✦ WE COME TO YOU</span>
               </div>
               <div className="p-5 md:p-4">
                 {/* Mobile: stacked text + mascot */}
