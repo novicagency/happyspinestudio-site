@@ -547,7 +547,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-10 items-center">
             {/* Description */}
             <div>
-              <p className="text-[#2c5887] text-base md:text-2xl font-semibold tracking-[0.2em] uppercase mb-2">About The Clinic</p>
+              <p className="text-[#2c5887] text-xl md:text-3xl font-semibold tracking-[0.2em] uppercase mb-2">About The Clinic</p>
               <h2 className="text-[#1a3351] text-2xl min-[320px]:text-[1.2rem] min-[321px]:text-2xl min-[344px]:text-[1.4rem] min-[345px]:text-2xl min-[360px]:text-xl min-[361px]:text-2xl md:text-3xl font-bold mb-4" style={{ fontFamily: 'var(--font-plus-jakarta)' }}>Your Neighborhood Chiropractor in Myrtle Beach</h2>
               <div className="space-y-4 text-[#1e3a5f] leading-relaxed">
                 <p>
